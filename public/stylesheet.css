@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Caveat");
 
-* {box-sizing: border-box;}
-
 body {
-    margin: 0;
+    /* margin: 0; */
     font-family: Caveat;
     background-color: #030c47;
     color: #9ad6fc;
+    font-size: 20px;
+    width: 100vw;
+    height: 100vh;
+}
+
+input {
+    font-family: Caveat;
+    color: #030c47;
     font-size: 20px;
 }
 
@@ -39,8 +45,19 @@ h3 {
 }
 
 .centreBox {
-    margin: auto !important;
+    margin: auto;
     width: 70%;
+}
+
+.loginCentreBox {
+    margin: auto;
+    width: 30vw;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    border: 10px solid #ebf7ff;
+    position: relative;
+    top: 10px;
 }
 
 hr {
@@ -69,153 +86,4 @@ s {
 
 i {
     color: #9ad6fc !important;
-}
-
-.button {
-    color: #ebf7ff;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family:'Caveat';
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #030c47;
-    border: 4px solid #ebf7ff;
-    border-radius: 8px;
-}
-
-.currentButton {
-    color: #9ad6fc;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family:'Caveat';
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #030c47;
-    border: 4px solid #9ad6fc;
-    border-radius: 8px;
-}
-
-.topnav {
-    overflow: hidden;
-    background-color: #030c47;
-    position: sticky;
-}
-
-.topnav a {
-    float: left;
-    color: #ebf7ff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    position: sticky;
-}
-
-.topnav a:hover {
-    background-color: #ebf7ff;
-    color: #030c47;
-    position: sticky;
-}
-
-.topnav a.active {
-    background-color: #9ad6fc;
-    color: #ebf7ff;
-    position: sticky;
-}
-
-.topnav .search-container {
-    float: right;
-    margin:auto;
-    position: sticky;
-}
-
-.topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    position: sticky;
-    border: none;
-}
-
-.topnav .search-container button {
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ebf7ff;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    position: sticky;
-}
-
-.topnav .search-container button:hover {
-    background: #ebf7ff;
-    position: sticky;
-}
-
-@media screen and (max-width: 600px) {
-    .topnav .search-container {
-      float: none;
-    }
-    .topnav a, .topnav input[type=text], .topnav .search-container button {
-      float: none;
-      display: block;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-      padding: 14px;
-    }
-    .topnav input[type=text] {
-      border: 1px solid #ebf7ff;  
-    }
-}
-
-.leftBox {
-    margin: auto !important;
-    width: 50%;
-    text-align: left;
-}
-
-.rightBox {
-    margin: auto !important;
-    width: 50%;
-    text-align: right;
-}
-
-/* .header {
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-} */
-
-#navbar {
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-    background-color: #030c47; /* maybe change this colour */
-}
-
-#navbar a {
-    float: left;
-    display: block;
-    color: #ebf7ff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-#navbar a:hover {
-    background-color: #ebf7ff;
-    color: #030c47;
-}
-
-#navbar a.active {
-    background-color: #9ad6fc;
-    color: #ebf7ff;
 }
