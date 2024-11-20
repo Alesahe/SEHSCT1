@@ -10,6 +10,10 @@ body {
     font-size: 20px;
 }
 
+hr {
+    background-color: #ebf7ff; 
+}
+
 h1 {
     color: #9ad6fc;
 }
@@ -40,7 +44,7 @@ h3 {
 }
 
 hr {
-    color: #d3d4db;
+    color: #ebf7ff;
 }
 
 small {
@@ -98,36 +102,42 @@ i {
 .topnav {
     overflow: hidden;
     background-color: #030c47;
-    position: fixed;
+    position: sticky;
 }
 
 .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #ebf7ff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
+    position: sticky;
 }
 
 .topnav a:hover {
     background-color: #ebf7ff;
     color: #030c47;
+    position: sticky;
 }
 
 .topnav a.active {
     background-color: #9ad6fc;
     color: #ebf7ff;
+    position: sticky;
 }
 
 .topnav .search-container {
     float: right;
+    margin:auto;
+    position: sticky;
 }
 
 .topnav input[type=text] {
     padding: 6px;
     margin-top: 8px;
     font-size: 17px;
+    position: sticky;
     border: none;
 }
 
@@ -136,14 +146,16 @@ i {
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
-    background: #ddd;
+    background: #ebf7ff;
     font-size: 17px;
     border: none;
     cursor: pointer;
+    position: sticky;
 }
 
 .topnav .search-container button:hover {
-    background: #ccc;
+    background: #ebf7ff;
+    position: sticky;
 }
 
 @media screen and (max-width: 600px) {
@@ -159,7 +171,7 @@ i {
       padding: 14px;
     }
     .topnav input[type=text] {
-      border: 1px solid #ccc;  
+      border: 1px solid #ebf7ff;  
     }
 }
 
@@ -173,4 +185,37 @@ i {
     margin: auto !important;
     width: 50%;
     text-align: right;
+}
+
+/* .header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+} */
+
+#navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: #030c47; /* maybe change this colour */
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #ebf7ff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: #ebf7ff;
+    color: #030c47;
+}
+
+#navbar a.active {
+    background-color: #9ad6fc;
+    color: #ebf7ff;
 }
