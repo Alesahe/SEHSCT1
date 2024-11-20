@@ -1,0 +1,60 @@
+set start date to be 2025
+events:
+- 3 jan: moon and venus in conjunction 
+    - 9:58pm
+- 4 jan: quadrantids
+    - meteor shower
+    - can produce up to 110 meteors an hour
+- 4 jan: moon and saturn in conjunction
+- 5 jan: perihelion (sun closest to Earth)
+- 5 jan: lunar occultation saturn
+- 6 jan: lunar occultation neptune
+- 8 jan: moon perigee (supermoon)
+- 10 jan: venus eastern elongation (closest to Earth)
+- 12 jan: venus dichotomy
+- 13 jan: asteroid 887 alinda opposition (close)
+- Comet C/2024 G3 (ATLAS) passes perigee
+- 13 jan: full moon
+- 14 jan: moon and mars in conjunction
+- 16 jan: mars at opposition (earth closest point to mars)
+- 17 jan: moon and regulus in conjunction
+- 18 jan: venus and saturn in conjunction
+- 19 jan: y-ursae minorid meteor shower
+- 23 jan: mars and pollux in conjunction
+- 25 jan: moon and antares in conjunction
+- 29 jan: new moon
+- 1 feb: moon and saturn in conjunction
+- 10 feb: moon and mars in conjunction
+- 12 feb: full moon
+- 13 feb: Asteroid 29 Amphitrite at opposition
+- 17 feb: moon and spica in conjunction
+- 18 feb: moon apogee
+- 8 mar: mercury eastern elongation
+- 9 mar: moon and pollux in conjunction
+- 12 mar: moon and regulus in conjunction
+- 13 mar: Asteroid 8 Flora at opposition
+- 14 mar: γ-Normid meteor shower 2025
+- 14 mar: total lunar eclipse 
+- 17 mar: moon spica conjunction
+- 18 mar: moon apogee
+- 20 mar: equinox
+- 21 mar: moon occult antares
+- 25 mar: Comet 21P/Giacobini-Zinner passes perihelion
+- 29 mar: partial solar eclipse
+- 29 mar: new moon
+- 30 mar: moon perigee
+- 9 apr: moon regulus conjunction
+- 11 apr: mercury saturn conjunction
+- 13 apr: full moon
+- 17 apr: moon antares conjunction
+- 17 apr: mercury neptune conjunction
+- 22 apr: mercury western elongation (closest to Earth)
+- 22 apr: lyrids meteor shower aawreidsfklarsjm, yhippee
+- 23 apr: π-Puppid meteor shower 2025
+
+
+ideas
+- dark/light mode
+- inclusivity
+    - screen reader
+    - toggled text siz
