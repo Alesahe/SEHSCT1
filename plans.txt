@@ -57,4 +57,8 @@ ideas
 - dark/light mode
 - inclusivity
     - screen reader
-    - toggled text siz
+    - toggled text size
+
+to-do:
+- add icon
+- make other pages
