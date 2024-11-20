@@ -87,3 +87,31 @@ s {
 i {
     color: #9ad6fc !important;
 }
+
+.button {
+    color: #ebf7ff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Caveat';
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #030c47;
+    border: 4px solid #ebf7ff;
+    border-radius: 8px;
+}
+
+.currentButton {
+    color: #9ad6fc;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Caveat';
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #030c47;
+    border: 4px solid #9ad6fc;
+    border-radius: 8px;
+}
