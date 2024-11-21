@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Caveat");
 
 body {
-    /* margin: 0; */
+    margin: auto;
     font-family: Caveat;
     background-color: #030c47;
     color: #9ad6fc;
     font-size: 20px;
     width: 100vw;
     height: 100vh;
+    
 }
 
 input {
@@ -70,6 +71,12 @@ small {
 
 .centreText {
     text-align: center;
+}
+
+.centreText-Box {
+    text-align: center;
+    margin: auto;
+    width: 70%;
 }
 
 p {

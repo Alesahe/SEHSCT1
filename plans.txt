@@ -62,3 +62,6 @@ ideas
 to-do:
 - add icon
 - make other pages
+- time and date?
+- log in system
+    - make log in button separate from dashboard

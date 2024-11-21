@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Caveat");
+
+/*dropdowns*/
+
+/* .down {
+    border: solid #ebf7ff;
+    border-width: 0 15px 15px 0;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+} */
+
+.calEntry {
+    object-fit: cover;
+    margin: auto !important;
+    padding-left: 70px;
+    text-align: left !important;
+    border: none;
+    width: 70%;
+    color: #ebf7ff;
+    font-family: Caveat;
+    border-radius: 50px;
+    font-size: 30px;
+    padding-bottom: 50px;
+    padding-top: 50px; 
+    opacity: 0.5;
+}
+
+.calEntry:hover {
+    opacity:1;
+}
+
+.conjunction {
+    background-image: url("cnjct.jpg");
+}
+
+.meteor {
+    /* background-image: url("https://www.lasm.org/wp-content/uploads/shower.webp"); */
+    background-image: url("https://www.youcanseethemilkyway.com/wp-content/uploads/2022/12/Quadrantids.jpg");
+}
+
+.fullmoon {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Supermoon_Nov-14-2016-minneapolis.jpg/440px-Supermoon_Nov-14-2016-minneapolis.jpg");
+}
+
+.perihelion {
+    background-image: url("sunset.png");
+}
+
+.occultation {
+    background-image: url("occultation.png");
+}
+
+
+button {
+    cursor: pointer;
+    margin:auto;
+}
+img {
+    width: 70%;
+    height: 40%;
+    object-fit: cover;
+}
