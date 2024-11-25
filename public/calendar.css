@@ -13,7 +13,7 @@
 } */
 
 .calEntry {
-    object-fit: cover;
+    background-size: 100%;
     margin: auto !important;
     padding-left: 70px;
     text-align: left !important;
@@ -23,8 +23,8 @@
     font-family: Caveat;
     border-radius: 50px;
     font-size: 30px;
-    padding-bottom: 50px;
-    padding-top: 50px; 
+    padding-bottom: 70px;
+    padding-top: 70px; 
     opacity: 0.5;
 }
 
@@ -32,27 +32,69 @@
     opacity:1;
 }
 
-.conjunction {
-    background-image: url("cnjct.jpg");
+.apogee {
+    background-image: url("images/apogee.png");
 }
 
-.meteor {
-    /* background-image: url("https://www.lasm.org/wp-content/uploads/shower.webp"); */
-    background-image: url("https://www.youcanseethemilkyway.com/wp-content/uploads/2022/12/Quadrantids.jpg");
+.asteroid {
+    background-image: url("images/asteroid.png");
+}
+
+.comet {
+    background-image: url("images/comet.png");
+}
+
+.conjunction {
+    background-image: url("images/cnjct.png");
+}
+
+.equinox {
+    background-image: url("images/equinox.png");
 }
 
 .fullmoon {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Supermoon_Nov-14-2016-minneapolis.jpg/440px-Supermoon_Nov-14-2016-minneapolis.jpg");
+    background-image: url("images/fullmoon.png");
 }
 
-.perihelion {
-    background-image: url("sunset.png");
+.lnrEcps {
+    background-image: url("images/lunareclipse.png");
+}
+
+.mars {
+    background-image: url("images/mars.png");
+}
+
+.mercury {
+    background-image: url("images/mercury.png");
+}
+
+.meteor {
+    background-image: url("images/meteor.png");
+}
+
+.nwmn {
+    background-image: url("images/nwmn.png");
 }
 
 .occultation {
-    background-image: url("occultation.png");
+    background-image: url("images/occultation.png");
 }
 
+.perihelion {
+    background-image: url("images/sunset.png");
+}
+
+.perigee {
+    background-image: url("images/supermoon.png");
+}
+
+.slrEcps {
+    background-image: url("images/solareclipse.png");
+}
+
+.venus {
+    background-image: url("images/venus.png")
+}
 
 button {
     cursor: pointer;
