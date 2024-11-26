@@ -5,6 +5,7 @@
     <meta name="description" content="an astronomical calendar of sorts">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> astral projections </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="icon" href="favicon.png" type="image/icon type">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="navbarstyle.css">
@@ -41,7 +42,12 @@
 
         <hr>
         <h3> <strong> ~ january ~</strong></h3>
-        <button class="calEntry conjunction"> moon and venus in conjunction <br> <small><sup>3 jan</sup></small> </button>
+        <div class="dropdown" id="flip">
+            <button onclick="toggleDropdown()" id="c1" class="dropbtn calEntry conjunction">moon and venus in conjunction <br> <small><sup>3 jan</sup></small> </button>
+            <div id="d1" class="dropdown-content"> <!-- d1-->
+                moon is cool and so is venus <br> hi
+            </div>
+        </div> 
         <br> <br>
         <button class="calEntry meteor"> quadrantid meteor shower <br> <small><sup>4 jan</sup></small> </button>
         <br><br>
@@ -49,7 +55,7 @@
         <br><br>
         <button class="calEntry perihelion"> perihelion <br> <small><sup>5 jan</sup></small> </button>
         <br><br>
-        <button class="img calEntry occultation"> saturn lunar occultation <br> <small><sup>5 jan</sup></small> </button>
+        <button class="calEntry occultation"> saturn lunar occultation <br> <small><sup>5 jan</sup></small> </button>
         <br><br>
         <button class="calEntry venus"> venus eastern elongation <br> <small><sup>10 jan</sup></small> </button>
         <br><br>
@@ -78,7 +84,7 @@
         <button class="calEntry nwmn"> new moon <br> <small><sup>29 jan</sup></small> </button>
         <br><br>
 
-        <hr>
+        <br><hr>
         <h3> <strong> ~ february ~</strong></h3>
         <button class="calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>1 feb</sup></small> </button>
         <br><br>
@@ -93,7 +99,7 @@
         <button class="calEntry apogee"> lunar apogee <br> <small><sup>18 feb</sup></small> </button>
         <br><br>
 
-        <hr>
+        <br><hr>
         <h3> <strong> ~ march ~</strong></h3>
         <button class="calEntry mercury"> mercury at eastern elongation <br> <small><sup>8 mar</sup></small> </button>
         <br><br>
@@ -124,7 +130,7 @@
         <button class="calEntry perigee"> moon at perigee <br> <small><sup>30 mar</sup></small> </button>
         <br><br>
 
-        <hr>
+        <br><hr>
         <h3> <strong> ~ april ~</strong></h3>
         <button class="calEntry conjunction"> moon and regulus in conjunction <br> <small><sup>9 apr</sup></small> </button>
         <br><br>
@@ -144,5 +150,36 @@
         <br><br>
     </div>
     <br> 
+
+<script>
+    // toggles the addition of the dropdown bar and button change
+    function toggleDropdown() {
+        var element = document.getElementById("c1");
+        element.classList.toggle("dropCal");
+        document.getElementById("d1").classList.toggle("show");
+
+        // var buttons = document.getElementsByClassName("calEntry");
+        // var dropdowns = document.getElementsByClassName("dropdown-content"); 
+        // for (var i = 0; i < buttons.length-1; i++) {
+        //     buttons[i].classList.toggle("dropCal");
+        //     dropdowns[i].classList.toggle("show");
+        // }
+        // // element.classList.toggle("dropCal");
+        // // document.getElementsByClassName("dropdown-content").classList.toggle("show");
+    }
+
+    // closes the dropdown menu and reverts the button style if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) { // possible change this
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var buttons = document.getElementsByClassName("calEntry");
+            for (var i = 0; i < dropdowns.length; i++) {
+                if (dropdowns[i].classList.contains('show')) dropdowns[i].classList.remove('show');
+                if (buttons[i].classList.contains("dropCal")) buttons[i].classList.remove("dropCal");
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
