@@ -42,9 +42,9 @@
 
         <hr>
         <h3> <strong> ~ january ~</strong></h3>
-        <div class="dropdown" id="flip">
-            <button onclick="toggleDropdown()" id="c1" class="dropbtn calEntry conjunction">moon and venus in conjunction <br> <small><sup>3 jan</sup></small> </button>
-            <div id="d1" class="dropdown-content"> <!-- d1-->
+        <div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn calEntry conjunction">moon and venus in conjunction <br> <small><sup>3 jan</sup></small> </button>
+            <div class="dropdown-content">
                 moon is cool and so is venus <br> hi
             </div>
         </div> 
@@ -153,30 +153,18 @@
 
 <script>
     // toggles the addition of the dropdown bar and button change
-    function toggleDropdown() {
-        var element = document.getElementById("c1");
-        element.classList.toggle("dropCal");
-        document.getElementById("d1").classList.toggle("show");
-
-        // var buttons = document.getElementsByClassName("calEntry");
-        // var dropdowns = document.getElementsByClassName("dropdown-content"); 
-        // for (var i = 0; i < buttons.length-1; i++) {
-        //     buttons[i].classList.toggle("dropCal");
-        //     dropdowns[i].classList.toggle("show");
-        // }
-        // // element.classList.toggle("dropCal");
-        // // document.getElementsByClassName("dropdown-content").classList.toggle("show");
-    }
+    $(document).ready(function(){
+        $(".dropbtn").click(function(){
+            $(this).siblings().slideDown("slow");
+            $(this).addClass('dropCal');
+        });
+    });
 
     // closes the dropdown menu and reverts the button style if the user clicks outside of it
     window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) { // possible change this
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var buttons = document.getElementsByClassName("calEntry");
-            for (var i = 0; i < dropdowns.length; i++) {
-                if (dropdowns[i].classList.contains('show')) dropdowns[i].classList.remove('show');
-                if (buttons[i].classList.contains("dropCal")) buttons[i].classList.remove("dropCal");
-            }
+        if (!event.target.matches('.dropbtn') && !event.target.matches('.dropdown-content')) {
+            $(".dropdown-content").hide();
+            $(".dropbtn").removeClass('dropCal');
         }
     }
 </script>
