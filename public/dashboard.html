@@ -10,31 +10,33 @@
     <link rel="stylesheet" href="navbarstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload=displayDateTime();>
+    <div class="topnav" id="topnavbar">
+        <a href="index.html">home</a>
+        <a class="active" href="dashboard.html">dashboard</a>
+        <a href="recent.html">recent</a>
+        <a href="calendar.html">calendar</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit" style="font-size: 18px;"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <a href="javascript:void(0);" class="icon" style="background-color: #030c47;" onclick="resizeNavbar()">
+            <i class="fa fa-bars" id="menubar" style="color: #ebf7ff !important;"></i>
+        </a>
+        <div id="datetime" style="font-size: 30px !important; text-align: right !important; padding-right: 250px !important; padding-top: 6px !important;"></div>
+
+    </div>
+    <hr>
+    
     <div class="centreText">
+        <br><br>
         <h1> 💙💜     astral projections     💜💙</h1>
         <p> ~ an astronomical calendar of sorts ~ </p>
     </div>
 
     <hr>
-
-    <div class="centreBox">
-        <div class="topnav">
-            <a href="index.html">home</a>
-            <a class="active" href="dashboard.html">dashboard</a>
-            <a href="recent.html">recent</a>
-            <a href="calendar.html">calendar</a>
-            <div class="search-container">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search..." name="search">
-                    <button type="submit" style="font-size: 18px;"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <hr>
-
-    <br> <br>
 
     <div class="loginCentreBox">
         <h2 style="text-align: center;"> <strong> 💙 login 💙 </strong> </h2>
@@ -58,5 +60,29 @@
         <a href="register.php" style="color: #9ad6fc; text-align:left !important;"> sign up </a>
     </div>
     <br> <br> <br>
+
+<script>
+    // responsive navbar
+    function resizeNavbar() {
+        var x = document.getElementById("topnavbar");
+        if (x.className === "topnav") {
+            x.className = "responsive topnav";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+    // displays time and date
+    function updateDT(){
+        var refresh=995; // Refresh rate in milli seconds
+        mytime=setTimeout('displayDateTime()',refresh)
+    }
+
+    function displayDateTime() {
+        var currDate = new Date();
+        document.getElementById("datetime").innerHTML = currDate.toDateString() + " | " + currDate.toLocaleTimeString();
+        updateDT();
+    }
+</script>
 </body>
 </html>

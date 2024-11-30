@@ -8,7 +8,6 @@ body {
     font-size: 20px;
     width: 100vw;
     height: 100vh;
-    
 }
 
 input {
@@ -22,15 +21,19 @@ hr {
 }
 
 h1 {
+    font-size: 35px !important;
     color: #9ad6fc;
 }
 
 h2 {
+    font-size: 30px !important;
     color: #9ad6fc;
 }
 
 h3 {
+    font-size: 25px !important;
     color: #9ad6fc;
+    
 }
 
 .blueColour {
@@ -52,7 +55,7 @@ h3 {
 
 .loginCentreBox {
     margin: auto;
-    width: 500px;
+    width: 50%;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;

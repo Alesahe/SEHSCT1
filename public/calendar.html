@@ -12,77 +12,81 @@
     <link rel="stylesheet" href="calendar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload=displayDateTime();>
+    <div class="topnav" id="topnavbar">
+        <a href="index.html">home</a>
+        <a href="dashboard.html">dashboard</a>
+        <a href="recent.html">recent</a>
+        <a class="active" href="calendar.html">calendar</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit" style="font-size: 18px;"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <a href="javascript:void(0);" class="icon" style="background-color: #030c47;" onclick="resizeNavbar()">
+            <i class="fa fa-bars" id="menubar" style="color: #ebf7ff !important;"></i>
+        </a>
+        <div id="datetime" style="font-size: 30px !important; text-align: right !important; padding-right: 250px !important; padding-top: 6px !important;"></div>
+        
+    </div>
+    <hr>
+    
     <div class="centreText">
+        <br><br>
         <h1> 💙💜     astral projections     💜💙</h1>
         <p> ~ an astronomical calendar of sorts ~ </p>
     </div>
 
     <hr>
 
-    <div class="centreBox">
-        <div class="topnav">
-            <a href="index.html">home</a>
-            <a href="dashboard.html">dashboard</a>
-            <a href="recent.html">recent</a>
-            <a class="active" href="calendar.html">calendar</a>
-            <div class="search-container">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search..." name="search">
-                    <button type="submit" style="font-size: 18px;"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <hr>
-    
     <div class="centreText-Box">
         <h2> <strong> 💙 calendar 💙 </strong> </h2>
         <p> an outline of astronomical events in 2025 </p>
-
         <hr>
+
         <h3> <strong> ~ january ~</strong></h3>
         <div class="dropdown">
             <button onclick="toggleDropdown()" class="dropbtn calEntry conjunction">moon and venus in conjunction <br> <small><sup>3 jan</sup></small> </button>
-            <div class="dropdown-content">
-                moon is cool and so is venus <br> hi
-            </div>
+                <div class="dropdown-content">
+                    moon is cool and so is venus <br> hi
+                </div>
+            <br> <br>
+            <button class="calEntry meteor"> quadrantid meteor shower <br> <small><sup>4 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>4 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry perihelion"> perihelion <br> <small><sup>5 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry occultation"> saturn lunar occultation <br> <small><sup>5 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry venus"> venus eastern elongation <br> <small><sup>10 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry venus"> venus dichotomy <br> <small><sup>12 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry asteroid"> asteroid 887 alinda at opposition <br> <small><sup>13 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry comet"> Comet C/2024 G3 (ATLAS) passes perigee <br> <small><sup>13 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry fullmoon"> full moon <br> <small><sup>13 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry conjunction"> moon and mars in conjunction <br> <small><sup>14 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry mars"> mars at opposition <br> <small><sup>16 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry conjunction"> moon and regulus in conjunction <br> <small><sup>17 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry conjunction"> venus and saturn in conjunction <br> <small><sup>18 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry meteor"> γ-ursae minorid meteor shower <br> <small><sup>19 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry conjunction"> mars and pollux in conjunction <br> <small><sup>23 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry conjunction"> moon and antares in conjunction <br> <small><sup>25 jan</sup></small> </button>
+            <br><br>
+            <button class="calEntry nwmn"> new moon <br> <small><sup>29 jan</sup></small> </button>
+            <br><br>
         </div> 
-        <br> <br>
-        <button class="calEntry meteor"> quadrantid meteor shower <br> <small><sup>4 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>4 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry perihelion"> perihelion <br> <small><sup>5 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry occultation"> saturn lunar occultation <br> <small><sup>5 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry venus"> venus eastern elongation <br> <small><sup>10 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry venus"> venus dichotomy <br> <small><sup>12 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry asteroid"> asteroid 887 alinda at opposition <br> <small><sup>13 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry comet"> Comet C/2024 G3 (ATLAS) passes perigee <br> <small><sup>13 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry fullmoon"> full moon <br> <small><sup>13 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> moon and mars in conjunction <br> <small><sup>14 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry mars"> mars at opposition <br> <small><sup>16 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> moon and regulus in conjunction <br> <small><sup>17 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> venus and saturn in conjunction <br> <small><sup>18 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry meteor"> γ-ursae minorid meteor shower <br> <small><sup>19 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> mars and pollux in conjunction <br> <small><sup>23 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> moon and antares in conjunction <br> <small><sup>25 jan</sup></small> </button>
-        <br><br>
-        <button class="calEntry nwmn"> new moon <br> <small><sup>29 jan</sup></small> </button>
-        <br><br>
 
         <br><hr>
         <h3> <strong> ~ february ~</strong></h3>
@@ -152,6 +156,28 @@
     <br> 
 
 <script>
+    // responsive navbar
+    function resizeNavbar() {
+        var x = document.getElementById("topnavbar");
+        if (x.className === "topnav") {
+            x.className = "responsive topnav";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+    // displays time and date
+    function updateDT(){
+        var refresh=995; // Refresh rate in milli seconds
+        mytime=setTimeout('displayDateTime()',refresh)
+    }
+
+    function displayDateTime() {
+        var currDate = new Date();
+        document.getElementById("datetime").innerHTML = currDate.toDateString() + " | " + currDate.toLocaleTimeString();
+        updateDT();
+    }
+
     // toggles the addition of the dropdown bar and button change
     $(document).ready(function(){
         $(".dropbtn").click(function(){
