@@ -61,28 +61,6 @@
     </div>
     <br> <br> <br>
 
-<script>
-    // responsive navbar
-    function resizeNavbar() {
-        var x = document.getElementById("topnavbar");
-        if (x.className === "topnav") {
-            x.className = "responsive topnav";
-        } else {
-            x.className = "topnav";
-        }
-    }
-
-    // displays time and date
-    function updateDT(){
-        var refresh=995; // Refresh rate in milli seconds
-        mytime=setTimeout('displayDateTime()',refresh)
-    }
-
-    function displayDateTime() {
-        var currDate = new Date();
-        document.getElementById("datetime").innerHTML = currDate.toDateString() + " | " + currDate.toLocaleTimeString();
-        updateDT();
-    }
-</script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

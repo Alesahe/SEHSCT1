@@ -44,29 +44,7 @@
     </div>
     <br> 
 
-<script>
-    // responsive navbar
-    function resizeNavbar() {
-        var x = document.getElementById("topnavbar");
-        if (x.className === "topnav") {
-            x.className = "responsive topnav";
-            // document.getElementById("menubar").style.color = "#ebf7ff !important";
-        } else {
-            x.className = "topnav";
-        }
-    }
+<script type="text/javascript" src="main.js"></script>
 
-    // displays time and date
-    function updateDT(){
-        var refresh=995; // Refresh rate in milli seconds
-        mytime=setTimeout('displayDateTime()',refresh)
-    }
-
-    function displayDateTime() {
-        var currDate = new Date();
-        document.getElementById("datetime").innerHTML = currDate.toDateString() + " | " + currDate.toLocaleTimeString();
-        updateDT();
-    }
-</script>
 </body>
 </html>
