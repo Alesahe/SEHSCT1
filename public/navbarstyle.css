@@ -2,6 +2,7 @@
 
 .topnav {
     overflow: hidden;
+    border-bottom: solid #ebf7ff;
     background-color: #030c47;
     top:0;
     width: 100%;

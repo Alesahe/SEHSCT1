@@ -45,15 +45,25 @@
         <p> an outline of astronomical events in 2025 </p>
         <hr>
 
-        <h3> <strong> ~ january ~</strong></h3>
+        <!-- <h3> <strong> ~ january ~</strong></h3> -->
         <div class="dropdown">
-            <button onclick="toggleDropdown()" class="dropbtn calEntry conjunction">moon and venus in conjunction <br> <small><sup>3 jan</sup></small> </button>
-                <div class="dropdown-content">
-                    moon is cool and so is venus <br> hi
+            <button onclick="toggleDropdown()" class="dropbtn month"> ~ january ~ </button>
+            <div class="dropdown-content">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn calEntry conjunction">moon and venus in conjunction <br><sup>3 jan</sup> </button>
+                    <div class="dropdown-content">
+                        moon is cool and so is venus <br> hi
+                    </div>
+                    <br> <br>
                 </div>
-            <br> <br>
-            <button class="calEntry meteor"> quadrantid meteor shower <br> <small><sup>4 jan</sup></small> </button>
-            <br><br>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn calEntry meteor"> quadrantid meteor shower <br> <small><sup>4 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+            </div>
             <button class="calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>4 jan</sup></small> </button>
             <br><br>
             <button class="calEntry perihelion"> perihelion <br> <small><sup>5 jan</sup></small> </button>
@@ -89,19 +99,23 @@
         </div> 
 
         <br><hr>
-        <h3> <strong> ~ february ~</strong></h3>
-        <button class="calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>1 feb</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> moon and mars in conjunction <br> <small><sup>10 feb</sup></small> </button>
-        <br><br>
-        <button class="calEntry fullmoon"> full moon <br> <small><sup>12 feb</sup></small> </button>
-        <br><br>
-        <button class="calEntry asteroid"> asteroid 29 amphitrite at opposition <br> <small><sup>13 feb</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> moon and spica in conjunction <br> <small><sup>17 feb</sup></small> </button>
-        <br><br>
-        <button class="calEntry apogee"> lunar apogee <br> <small><sup>18 feb</sup></small> </button>
-        <br><br>
+        <!-- <h3> <strong> ~ february ~</strong></h3> -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn month"> ~ january ~ </button>
+                <div class="dropdown-content">
+                    <button class="calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>1 feb</sup></small> </button>
+                    <br><br>
+                    <button class="calEntry conjunction"> moon and mars in conjunction <br> <small><sup>10 feb</sup></small> </button>
+                    <br><br>
+                    <button class="calEntry fullmoon"> full moon <br> <small><sup>12 feb</sup></small> </button>
+                    <br><br>
+                    <button class="calEntry asteroid"> asteroid 29 amphitrite at opposition <br> <small><sup>13 feb</sup></small> </button>
+                    <br><br>
+                    <button class="calEntry conjunction"> moon and spica in conjunction <br> <small><sup>17 feb</sup></small> </button>
+                    <br><br>
+                    <button class="calEntry apogee"> lunar apogee <br> <small><sup>18 feb</sup></small> </button>
+                    <br><br>
+                
 
         <br><hr>
         <h3> <strong> ~ march ~</strong></h3>
@@ -155,45 +169,7 @@
     </div>
     <br> 
 
-<script>
-    // responsive navbar
-    function resizeNavbar() {
-        var x = document.getElementById("topnavbar");
-        if (x.className === "topnav") {
-            x.className = "responsive topnav";
-        } else {
-            x.className = "topnav";
-        }
-    }
-
-    // displays time and date
-    function updateDT(){
-        var refresh=995; // Refresh rate in milli seconds
-        mytime=setTimeout('displayDateTime()',refresh)
-    }
-
-    function displayDateTime() {
-        var currDate = new Date();
-        document.getElementById("datetime").innerHTML = currDate.toDateString() + " | " + currDate.toLocaleTimeString();
-        updateDT();
-    }
-
-    // toggles the addition of the dropdown bar and button change
-    $(document).ready(function(){
-        $(".dropbtn").click(function(){
-            $(this).siblings().slideDown("slow");
-            $(this).addClass('dropCal');
-        });
-    });
-
-    // closes the dropdown menu and reverts the button style if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn') && !event.target.matches('.dropdown-content')) {
-            $(".dropdown-content").hide();
-            $(".dropbtn").removeClass('dropCal');
-        }
-    }
-</script>
+<script type="text/javascript" src="main.js"></script>
 
 </body>
 </html>
