@@ -23,6 +23,7 @@ function displayDateTime() {
 // toggles the addition of the dropdown bar and button change MONTHS ONLY
 $(document).ready(function(){
     $(".month").click(function(){
+        $("")
         $(this).siblings().slideDown("slow");
         $(this).addClass('dropCal');
     });
@@ -36,17 +37,46 @@ $(document).ready(function(){
     });
 });
 
-// closes the dropdown menu and reverts the button style if the user clicks outside of it FOR MONTHS ONLY
+// closes the dropdown menu and reverts the button style if the user clicks outside of it
 window.onclick = function(event) {
-    if ((!event.target.matches('.dropbtn') && !event.target.matches('.dropdown-content')) || (event.target.style.opacity==1)) {
-        $(".dropdown-content").hide(); // event.target.matches('.dropCal') && 
+    if ((!event.target.matches('.dropbtn') && !event.target.matches('.dropdown-content') && !event.target.matches(".dropdown")) || (event.target.style.opacity==1)) { // 
+        $(".dropdown-content").hide();
         $(".dropbtn").removeClass('dropCal');
     } else if (event.target.matches('.dropbtn')){
         $(event.target).parent().siblings().children(".dropdown-content").hide();
         $(event.target).parent().siblings().children(".calEntry").removeClass("dropCal");
-        // $(".dropbtn").removeClass('dropCal');
-    } else if ($(event.target).matches(".dropdown-content")){
+    } else if (event.target.matches(".dropdown-content")){
         $(event.target).children().children(".dropdown-content").hide();
         $(event.target).children().children(".calEntry").removeClass("dropCal");
+    } else if (event.target.matches(".dropdown") && event.target.parentElement.matches(".dropdown-content")){
+        $(event.target).children(".dropdown-content").hide();
+        $(event.target).children(".calEntry").removeClass("dropCal");
+        $(event.target).siblings(".dropdown").children(".dropdown-content").hide();
+        $(event.target).siblings(".dropdown").children(".calEntry").removeClass("dropCal");
+    } else {
+        console.log(event.target);
     }
+}
+// search stuff 
+
+// const db =  new sqlite3.Database(".database/events.db");
+
+// document.getElementById("searchInput").addEventListener("keyup", function () {
+//     console.log(db.all("SELECT * FROM events"));
+//     console.log(document.getElementById("searchInput"));
+// });
+
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database(".database/events.db");
+var row;
+
+db.get("SELECT date FROM events", function() {
+    console.log(row.date);
+    // console.log(row.open_minut);
+    // row = row.open_hour;
+    callback(row);
+});
+
+function callback(row) {
+    console.log("R:" + row);
 }

@@ -20,7 +20,7 @@
         <a class="active" href="calendar.html">calendar</a>
         <div class="search-container">
             <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search">
+                <input type="text" placeholder="Search..." name="search" id="searchInput">
                 <button type="submit" style="font-size: 18px;"><i class="fa fa-search"></i></button>
             </form>
         </div>
@@ -47,77 +47,166 @@
 
         <!-- <h3> <strong> ~ january ~</strong></h3> -->
         <div class="dropdown">
-            <button onclick="toggleDropdown()" class="dropbtn month"> ~ january ~ </button>
+            <button class="dropbtn month"> ~ january ~ </button>
             <div class="dropdown-content">
                 <div class="dropdown">
-                    <button onclick="toggleDropdown()" class="dropbtn calEntry conjunction">moon and venus in conjunction <br><sup>3 jan</sup> </button>
+                    <button class="dropbtn calEntry conjunction">moon and venus in conjunction <br><sup>3 jan</sup> </button>
                     <div class="dropdown-content">
                         moon is cool and so is venus <br> hi
                     </div>
                     <br> <br>
                 </div>
                 <div class="dropdown">
-                    <button onclick="toggleDropdown()" class="dropbtn calEntry meteor"> quadrantid meteor shower <br> <small><sup>4 jan</sup></small> </button>
+                    <button class="dropbtn calEntry meteor"> quadrantid meteor shower <br> <small><sup>4 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>4 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn calEntry perihelion"> perihelion <br> <small><sup>5 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn calEntry calEntry occultation"> saturn lunar occultation <br> <small><sup> 5 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn calEntry venus"> venus eastern elongation <br> <small><sup>10 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn calEntry venus"> venus dichotomy <br> <small><sup>12 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn calEntry asteroid"> asteroid 887 alinda at opposition <br> <small><sup>13 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn calEntry comet"> Comet C/2024 G3 (ATLAS) passes perigee <br> <small><sup>13 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn calEntry fullmoon"> full moon <br> <small><sup>13 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn calEntry conjunction"> moon and mars in conjunction <br> <small><sup>14 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn calEntry mars"> mars at opposition <br> <small><sup>16 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn calEntry conjunction"> moon and regulus in conjunction <br> <small><sup>17 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button   class="dropbtn calEntry conjunction"> venus and saturn in conjunction <br> <small><sup>18 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button   class="dropbtn calEntry meteor"> γ-ursae minorid meteor shower <br> <small><sup>19 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+
+                <div class="dropdown">
+                    <button   class="dropbtn calEntry conjunction">  mars and pollux in conjunction <br> <small><sup>23 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button   class="dropbtn calEntry conjunction"> moon and antares in conjunction <br> <small><sup>25 jan</sup></small> </button>
+                    <div class="dropdown-content">
+                        meteors are so sick <br> hi
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button   class="dropbtn calEntry nwmn"> new moon <br> <small><sup>29 jan</sup></small> </button>
                     <div class="dropdown-content">
                         meteors are so sick <br> hi
                     </div>
                     <br><br>
                 </div>
             </div>
-            <button class="calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>4 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry perihelion"> perihelion <br> <small><sup>5 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry occultation"> saturn lunar occultation <br> <small><sup>5 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry venus"> venus eastern elongation <br> <small><sup>10 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry venus"> venus dichotomy <br> <small><sup>12 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry asteroid"> asteroid 887 alinda at opposition <br> <small><sup>13 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry comet"> Comet C/2024 G3 (ATLAS) passes perigee <br> <small><sup>13 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry fullmoon"> full moon <br> <small><sup>13 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry conjunction"> moon and mars in conjunction <br> <small><sup>14 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry mars"> mars at opposition <br> <small><sup>16 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry conjunction"> moon and regulus in conjunction <br> <small><sup>17 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry conjunction"> venus and saturn in conjunction <br> <small><sup>18 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry meteor"> γ-ursae minorid meteor shower <br> <small><sup>19 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry conjunction"> mars and pollux in conjunction <br> <small><sup>23 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry conjunction"> moon and antares in conjunction <br> <small><sup>25 jan</sup></small> </button>
-            <br><br>
-            <button class="calEntry nwmn"> new moon <br> <small><sup>29 jan</sup></small> </button>
-            <br><br>
         </div> 
 
-        <br><hr>
+        <br><br>
         <!-- <h3> <strong> ~ february ~</strong></h3> -->
         <div class="dropdown">
-            <button onclick="toggleDropdown()" class="dropbtn month"> ~ january ~ </button>
-                <div class="dropdown-content">
-                    <button class="calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>1 feb</sup></small> </button>
-                    <br><br>
-                    <button class="calEntry conjunction"> moon and mars in conjunction <br> <small><sup>10 feb</sup></small> </button>
-                    <br><br>
-                    <button class="calEntry fullmoon"> full moon <br> <small><sup>12 feb</sup></small> </button>
-                    <br><br>
-                    <button class="calEntry asteroid"> asteroid 29 amphitrite at opposition <br> <small><sup>13 feb</sup></small> </button>
-                    <br><br>
-                    <button class="calEntry conjunction"> moon and spica in conjunction <br> <small><sup>17 feb</sup></small> </button>
-                    <br><br>
-                    <button class="calEntry apogee"> lunar apogee <br> <small><sup>18 feb</sup></small> </button>
-                    <br><br>
-                
+            <button  class="dropbtn month"> ~ february ~ </button>
+            <div class="dropdown-content">
+                <div class="dropdown">
+                    <button class="dropbtn calEntry conjunction">moon and saturn in conjunction <br><sup>1 feb</sup> </button>
+                    <div class="dropdown-content">
+                        moon is cool and so is venus <br> hi
+                    </div>
+                    <br> <br>
+                </div>
+                <button class="calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>1 feb</sup></small> </button>
+                <br><br>
+                <button class="calEntry conjunction"> moon and mars in conjunction <br> <small><sup>10 feb</sup></small> </button>
+                <br><br>
+                <button class="calEntry fullmoon"> full moon <br> <small><sup>12 feb</sup></small> </button>
+                <br><br>
+                <button class="calEntry asteroid"> asteroid 29 amphitrite at opposition <br> <small><sup>13 feb</sup></small> </button>
+                <br><br>
+                <button class="calEntry conjunction"> moon and spica in conjunction <br> <small><sup>17 feb</sup></small> </button>
+                <br><br>
+                <button class="calEntry apogee"> lunar apogee <br> <small><sup>18 feb</sup></small> </button>
+                <br><br>
+            </div>
+        </div>
 
-        <br><hr>
+        <!-- <br><hr>
         <h3> <strong> ~ march ~</strong></h3>
         <button class="calEntry mercury"> mercury at eastern elongation <br> <small><sup>8 mar</sup></small> </button>
         <br><br>
@@ -166,8 +255,8 @@
         <br><br>
         <button class="calEntry meteor"> π-puppid meteor shower <br> <small><sup>23 apr</sup></small> </button>
         <br><br>
-    </div>
-    <br> 
+    </div> -->
+    <br>
 
 <script type="text/javascript" src="main.js"></script>
 

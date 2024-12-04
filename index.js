@@ -2,6 +2,8 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+const sqlite = require("sqlite3").verbose();
+
 const port = 5500;
 const hostname = '127.0.0.1';
 

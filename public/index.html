@@ -5,6 +5,7 @@
     <meta name="description" content="an astronomical calendar of sorts">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> astral projections </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="icon" href="favicon.png" type="image/icon type">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="navbarstyle.css">
@@ -18,8 +19,8 @@
         <a href="calendar.html">calendar</a>
         <div class="search-container" style="font-size: 25px !important;">
             <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Search..." name="search" id="searchInput">
+                <button type="submit" style="font-size: 18px;"><i class="fa fa-search"></i></button>
             </form>
         </div>
         <a href="javascript:void(0);" class="icon" style="background-color: #030c47;" onclick="resizeNavbar()">
