@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Goudy Bookletter 1911");
+
+:root {
+    --background-colour: #030c47;
+    --main-colour: #ebf7ff;
+    --highlight-colour: #9ad6fc;
+}  

@@ -1,9 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Caveat");
-
-/* .calCentreBox { */
-
-/* } */
-
 .calEntry {
     background-size: 100%;
     margin: auto !important;
@@ -11,8 +5,8 @@
     text-align: left !important;
     border: none;
     width: 100% !important;
-    color: #ebf7ff;
-    font-family: Caveat;
+    color: var(--main-colour);
+    font-family: "Goudy Bookletter 1911";
     border-radius: 50px;
     font-size: 30px ;
     padding-bottom: 70px !important;
@@ -25,13 +19,13 @@
 }
 
 .month {
-    background-color: #030c47;
+    background-color: var(--background-colour);
     margin: auto !important;
     text-align: center !important;
-    border: solid #ebf7ff;
+    border: solid var(--main-colour);
     width: 100% !important;
-    color: #ebf7ff;
-    font-family: Caveat;
+    color: var(--main-colour);
+    font-family: "Goudy Bookletter 1911";
     border-radius: 50px;
     font-size: 40px;
     padding-bottom: 70px !important;
@@ -47,74 +41,74 @@
     opacity:1;
     border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
-    border-top: solid #ebf7ff;
-    border-right: solid #ebf7ff;
+    border-top: solid var(--main-colour);
+    border-right: solid var(--main-colour);
     border-bottom: none;
-    border-left: solid #ebf7ff;
+    border-left: solid var(--main-colour);
 }
 
 .apogee {
-    background-image: url("images/apogee.png");
+    background-image: url("../images/apogee.png");
 }
 
 .asteroid {
-    background-image: url("images/asteroid.png");
+    background-image: url("../images/asteroid.png");
 }
 
 .comet {
-    background-image: url("images/comet.png");
+    background-image: url("../images/comet.png");
 }
 
 .conjunction {
-    background-image: url("images/cnjct.png");
+    background-image: url("../images/cnjct.png");
 }
 
 .equinox {
-    background-image: url("images/equinox.png");
+    background-image: url("../images/equinox.png");
 }
 
 .fullmoon {
-    background-image: url("images/fullmoon.png");
+    background-image: url("../images/fullmoon.png");
 }
 
 .lnrEcps {
-    background-image: url("images/lunareclipse.png");
+    background-image: url("../images/lunareclipse.png");
 }
 
 .mars {
-    background-image: url("images/mars.png");
+    background-image: url("../images/mars.png");
 }
 
 .mercury {
-    background-image: url("images/mercury.png");
+    background-image: url("../images/mercury.png");
 }
 
 .meteor {
-    background-image: url("images/meteor.png");
+    background-image: url("../images/meteor.png");
 }
 
 .nwmn {
-    background-image: url("images/nwmn.png");
+    background-image: url("../images/nwmn.png");
 }
 
 .occultation {
-    background-image: url("images/occultation.png");
+    background-image: url("../images/occultation.png");
 }
 
 .perihelion {
-    background-image: url("images/sunset.png");
+    background-image: url("../images/sunset.png");
 }
 
 .perigee {
-    background-image: url("images/supermoon.png");
+    background-image: url("../images/supermoon.png");
 }
 
 .slrEcps {
-    background-image: url("images/solareclipse.png");
+    background-image: url("../images/solareclipse.png");
 }
 
 .venus {
-    background-image: url("images/venus.png")
+    background-image: url("../images/venus.png")
 }
 
 button {
@@ -133,7 +127,7 @@ img {
 .dropdown {
     position: relative;
     display: inline-block;
-    width: 90%;
+    width: 90%; 
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -144,13 +138,13 @@ img {
     padding-bottom: 25px;
     text-align: left;
     /* position: absolute; */
-    background-color: #030c47;
+    background-color: var(--background-colour);
     /* border: #ebf7ff !important; */
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    border-bottom: solid #ebf7ff;
-    border-left: solid #ebf7ff !important;
-    border-right: solid #ebf7ff !important;
+    border-bottom: solid var(--main-colour);
+    border-left: solid var(--main-colour) !important;
+    border-right: solid var(--main-colour) !important;
     width: 90%-1px !important;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -158,7 +152,6 @@ img {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;

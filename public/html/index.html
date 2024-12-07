@@ -7,45 +7,46 @@
     <title> astral projections </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="icon" href="favicon.png" type="image/icon type">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="navbarstyle.css">
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="../css/navbarstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body onload=displayDateTime();>
     <div class="topnav" id="topnavbar">
-        <a class="active" href="index.html">home</a>
-        <a href="dashboard.html">dashboard</a>
-        <a href="recent.html">recent</a>
-        <a href="calendar.html">calendar</a>
-        <div class="search-container" style="font-size: 25px !important;">
-            <form action="/action_page.php">
+        <a class="active" href="/">home</a>
+        <a href="dashboard">dashboard</a>
+        <a href="recent">recent</a>
+        <a href="calendar">calendar</a>
+        <div class="search-container">
+            <form action="">
                 <input type="text" placeholder="Search..." name="search" id="searchInput">
-                <button type="submit" style="font-size: 18px;"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchSubmit"><i class="fa fa-search"></i></button>
             </form>
         </div>
-        <a href="javascript:void(0);" class="icon" style="background-color: #030c47;" onclick="resizeNavbar()">
-            <i class="fa fa-bars" id="menubar" style="color: #ebf7ff !important;"></i>
+        <a href="javascript:void(0);" class="icon" style="background-color: var(--background-colour);" onclick="resizeNavbar()">
+            <i class="fa fa-bars" id="menubar" style="color: var(--main-colour) !important;"></i>
         </a>
-        <div id="datetime" style="font-size: 30px !important; text-align: right !important; padding-right: 250px !important; padding-top: 6px !important;"></div>
+        <div id="datetime"></div>
     </div>
     <hr>
     
     <div class="centreText">
         <br><br>
-        <h1> 💙💜     astral projections     💜💙</h1>
+        <h1> Astral Projections </h1>
         <p> ~ an astronomical calendar of sorts ~ </p>
     </div>
 
     <hr>
     
     <div class="centreBox">
-        <h2> <strong> 💙 Welcome! 💙 </strong> </h2>
+        <h2> <strong> Welcome! </strong> </h2>
         <p> astral projecting into the sun, brb <br> wake up sheeple </p>
     <hr>
     </div>
     <br> 
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
 
 </body>
 </html>

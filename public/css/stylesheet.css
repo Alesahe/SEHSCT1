@@ -1,0 +1,98 @@
+body {
+    margin: auto;
+    font-family: "Roboto";
+    background-color: var(--background-colour);
+    color: var(--main-colour);
+    font-size: 18px;
+    width: 100vw;
+    height: 100vh;
+}
+
+input {
+    font-family: "Roboto";
+    color: var(--highlight-colour);
+}
+
+hr {
+    background-color: var(--background-colour); 
+}
+
+h1 {
+    font-family: "Goudy Bookletter 1911";
+    font-size: 35px !important;
+    color: var(--highlight-colour);
+}
+
+h2 {
+    font-family: "Goudy Bookletter 1911";
+    font-size: 30px !important;
+    color: var(--highlight-colour);
+}
+
+h3 {
+    font-family: "Goudy Bookletter 1911";
+    font-size: 25px !important;
+    color: var(--highlight-colour);
+}
+
+.blueColour {
+    color: var(--highlight-colour);
+}
+
+.centreHeading {
+    margin: auto;
+    border: 2px var(--main-colour);
+    padding: 30px;
+    background: var(--main-colour);
+    color: var(--background-colour);
+}
+
+.centreBox {
+    margin: auto;
+    width: 70%;
+}
+
+.loginCentreBox {
+    margin: auto;
+    width: 50%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    border: 10px solid var(--main-colour);
+    position: relative;
+    top: 10px;
+}
+
+hr {
+    color: var(--main-colour);
+}
+
+small {
+    color: var(--main-colour);
+}
+
+.centreText {
+    text-align: center;
+}
+
+.centreText-Box { 
+    text-align: center;
+    margin: auto;
+    width: 90vw;
+}
+
+p {
+    color: var(--main-colour) !important;
+}
+
+li {
+    color: var(--main-colour);
+}
+
+s {
+    color: var(--main-colour);
+}
+
+i {
+    color: var(--highlight-colour) !important;
+}

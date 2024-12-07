@@ -1,33 +1,32 @@
-@import url("https://fonts.googleapis.com/css?family=Caveat");
-
 .topnav {
     overflow: hidden;
-    border-bottom: solid #ebf7ff;
-    background-color: #030c47;
+    border-bottom: solid var(--main-colour);
+    background-color: var(--background-colour);
     top:0;
     width: 100%;
     position: fixed;
-    z-index: 2
+    z-index: 2;
+    font-family: "Goudy Bookletter 1911";
+    font-size: 25px;
 }
 
 .topnav a {
     float: left;
     display: block;
-    color: #ebf7ff;
+    color: var(--main-colour);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 25px;
 }
 
 .topnav a:hover {
-    background-color: #ebf7ff;
-    color: #030c47;
+    background-color: var(--main-colour);
+    color: var(--background-colour);
 }
 
 .topnav a.active {
-    background-color: #9ad6fc;
-    color: #ebf7ff;
+    background-color: var(--highlight-colour);
+    color: var(--main-colour);
 }
 
 .topnav .icon {
@@ -51,14 +50,14 @@
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
-    background: #ebf7ff;
+    background: var(--main-colour);
     font-size: 17px;
     border: none;
     cursor: pointer;
 }
 
 .topnav .search-container button:hover {
-    background: #ebf7ff;
+    background: var(--main-colour);
 }
 
 span {
@@ -70,16 +69,19 @@ span {
     padding: 6px 10px;
 }
 
-@media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
+@media screen and (max-width: 1050px){
     #datetime {display: none;}
+}
+
+@media screen and (max-width: 700px) {
+    .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
         float: right;
         display: block;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
         position: absolute;
@@ -91,4 +93,22 @@ span {
         display: block;
         text-align: left;
     }
+}
+
+#datetime {
+    /* font-size: 30px; */
+    text-align: right;
+    padding-right: 300px;
+    padding-top: 10px;
+}
+
+#searchInput {
+    position: relative;
+    color: var(--background-colour);
+    top: 7px;
+}
+
+#searchSubmit {
+    position: relative;
+    top: 7px;
 }
