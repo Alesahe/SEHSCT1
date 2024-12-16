@@ -27,20 +27,20 @@ searchBI.addEventListener("keyup", async function(event) {
     }
 });
 
+
 function displayResults(validEntries) {
     //make table visible
     document.getElementById("potentialSearchResults").style.display = "table";
 
     // loop through array of arrays of events
-    for (let i=0; i<Math.min(validEntries.length, 9); i++){
+    for (let i=0; i<Math.min(validEntries.length, 6); i++){
         const tableBody = document.getElementById("potentialSearchResults").getElementsByTagName("tbody")[0];  
         
         // create new row
         const newRow = tableBody.insertRow(); 
         
         // create new cells within the rows and add information into cells to display
-        newRow.insertCell(0).textContent = validEntries[i][0] + " " + validEntries[i][1];
-        newRow.insertCell(1).textContent = validEntries[i][2];
+        const newCell = newRow.insertCell(0).innerHTML = '<a href="https://www.geeksforgeeks.org/how-to-create-a-link-in-javascript/">'+validEntries[i][0] + " " + validEntries[i][1] + " " + validEntries[i][2]+'</a>';
     }
 }
 

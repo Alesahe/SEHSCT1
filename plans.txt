@@ -64,9 +64,11 @@ to-do:
 - jump links
 
 - use notification api
+- whats up with your search bar when you press prtsc ;-;
 
 small bgu fixes:
 - make it only query the database after two seconds of a key not being pressed or smth
+- make search bar background --main-colour
 - fix menu (how to make it active and change colour as well?)
 - make sure it's accessible
 - fix weird dropdown toggle (out, in, out)
@@ -74,3 +76,6 @@ small bgu fixes:
 - make stuff look good with bootstrap
 
 Fix how when the screen is of restricted size, only the home tab displays
+
+big bug fixes:
+- dynamically render the page :sob:
