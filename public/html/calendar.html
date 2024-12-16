@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="../css/navbarstyle.css">
+    <link rel="stylesheet" href="../css/searchBar.css">
     <link rel="stylesheet" href="../css/calendar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -24,6 +25,17 @@
                 <input type="text" placeholder="Search..." name="search" id="searchInput">
                 <button type="submit" id="searchSubmit"><i class="fa fa-search"></i></button>
             </form>
+            <table id="potentialSearchResults">
+                <thead>
+                    <tr id="tableHeader">
+                        <th style="width: 90px;">  </th>
+                        <th style="width: 130px;">  </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- searchBar.js adds rows here based on the search input -->
+                </tbody>
+            </table>
         </div>
         <a href="javascript:void(0);" class="icon" style="background-color: var(--background-colour);" onclick="resizeNavbar()">
             <i class="fa fa-bars" id="menubar" style="color: var(--main-colour) !important;"></i>
@@ -37,7 +49,7 @@
         <h1> Astral Projections </h1>
         <p> ~ an astronomical calendar of sorts ~ </p>
     </div>
-    
+
     <hr>
 
     <div class="centreText-Box">
@@ -50,129 +62,143 @@
             <button class="dropbtn month"> ~ january ~ </button>
             <div class="dropdown-content">
                 <div class="dropdown">
-                    <button class="dropbtn calEntry conjunction">moon and venus in conjunction <br> <small><sup>3 jan</sup></small> </button>
+                    <button class="dropbtn calEntry conjunction" id="jumplink1">moon and venus in conjunction <br> <sup>3 jan</sup> </button>
                     <div class="dropdown-content">
-                        moon is cool and so is venus <br> hi
+                        On 3 January, the waxing-crescent moon and Venus will be visible 3.26° apart to the West; in conjunction. 
                     </div>
                     <br> <br>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn calEntry meteor"> quadrantid meteor shower <br> <small><sup>4 jan</sup></small> </button>
+                    <button class="dropbtn calEntry meteor"> quadrantid meteor shower <br> <sup>4 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        The Quadrantids meteor shower will reach its maximum activity on 3 to 4 January. One of the most reliable showers annually, the Quadrantids will reach a zenithal hourly rate (ZHR) of 110 meteors an hour under ideal conditions. Another interesting fact about this particular shower is that the meteors originate from the asteroid 2003 EH₁, rather than a comet like most other showers.
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>4 jan</sup></small> </button>
+                    <button class="dropbtn calEntry conjunction"> moon and saturn in conjunction <br> <sup>4 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 4 January, the waxing-crescent moon and Saturn will be visible 3.59° apart to the West; in conjunction. 
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button  class="dropbtn calEntry perihelion"> perihelion <br> <small><sup>5 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry perihelion"> perihelion <br> <sup>5 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 5 January, the Earth will reach perihelion; in its elliptical orbit, it will move closer to the Sun than at any other point during the year. Therefore, the Sun will be 7% brighter than the Earth’s farthest point, or aphelion! On this day, the celestial bodies will only be 147, 104, 000km apart.
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button  class="dropbtn calEntry calEntry occultation"> saturn lunar occultation <br> <small><sup> 5 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry calEntry occultation"> saturn lunar occultation <br> <sup> 5 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 5 January, Saturn will be occulted by the moon; that is, the moon will pass in front of the planet. 
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button  class="dropbtn calEntry venus"> venus eastern elongation <br> <small><sup>10 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry calEntry occultation"> neptune lunar occultation <br> <sup> 6 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 6 January, Neptune will be occulted by the moon; that is, the moon will pass in front of the planet.  
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button  class="dropbtn calEntry venus"> venus dichotomy <br> <small><sup>12 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry calEntry perigee"> moon in perigee <br> <sup> 6 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 8 January, the moon will be in perigee; in its elliptical orbit, it will move closer to Earth than at any other point during its cycle. Therefore, it will appear 14% bigger than at its farthest point, or apogee! 
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button  class="dropbtn calEntry asteroid"> asteroid 887 alinda at opposition <br> <small><sup>13 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry venus"> venus eastern elongation <br> <sup>10 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 10 January, Venus will be at its Eastern elongation, where it is the closest to Earth than at any other point during the celestial bodies’ elliptical orbits.
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button  class="dropbtn calEntry comet"> Comet C/2024 G3 (ATLAS) passes perigee <br> <small><sup>13 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry venus"> venus dichotomy <br> <sup>12 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 12 January, exactly half of the planet Venus will appear illuminated by the Sun.
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button  class="dropbtn calEntry fullmoon"> full moon <br> <small><sup>13 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry asteroid"> asteroid 887 alinda at opposition <br> <sup>13 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 13 January, the asteroid 887 Alinda will be at opposition - it will reach the closest point to Earth in its orbit. 
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button  class="dropbtn calEntry conjunction"> moon and mars in conjunction <br> <small><sup>14 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry comet"> Comet C/2024 G3 (ATLAS) passes perigee <br> <sup>13 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 13 Jan, the comet C/2024 G3, otherwise known as ATLAS, will pass its perigee - meaning it is at its closest to Earth during its orbit!
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button  class="dropbtn calEntry mars"> mars at opposition <br> <small><sup>16 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry fullmoon"> full moon <br> <sup>13 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        The moon will be full on 13 January.
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button  class="dropbtn calEntry conjunction"> moon and regulus in conjunction <br> <small><sup>17 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry conjunction"> moon and mars in conjunction <br> <sup>14 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 14 January, the waxing-crescent moon and Mars will be visible 4.3° apart to the North-East; in conjunction. 
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button   class="dropbtn calEntry conjunction"> venus and saturn in conjunction <br> <small><sup>18 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry mars"> mars at opposition <br> <sup>16 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 16 January, Mars will be at opposition - it will reach the closest point to Earth in its orbit. 
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button   class="dropbtn calEntry meteor"> γ-ursae minorid meteor shower <br> <small><sup>19 jan</sup></small> </button>
+                    <button  class="dropbtn calEntry conjunction"> moon and mars in conjunction <br> <sup>17 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 17 January, the waning-gibbous moon and Mars will be visible 2.22° apart to the North-West; in conjunction. 
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button   class="dropbtn calEntry conjunction"> venus and saturn in conjunction <br> <sup>18 jan</sup> </button>
+                    <div class="dropdown-content">
+                        On 18 January, Venus and Saturn will be visible 2.19° apart to the West; in conjunction. 
+                    </div>
+                    <br><br>
+                </div>
+                <div class="dropdown">
+                    <button   class="dropbtn calEntry meteor"> γ-ursae minorid meteor shower <br> <sup>19 jan</sup> </button>
+                    <div class="dropdown-content">
+                        The γ-Ursae Minorid meteor shower will reach its maximum activity on 19 January. One of the less reliable showers, the Minorids will reach a zenithal hourly rate (ZHR) of 3 meteors an hour under ideal conditions. 
                     </div>
                     <br><br>
                 </div>
 
                 <div class="dropdown">
-                    <button   class="dropbtn calEntry conjunction">  mars and pollux in conjunction <br> <small><sup>23 jan</sup></small> </button>
+                    <button   class="dropbtn calEntry conjunction">  mars and pollux in conjunction <br> <sup>23 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 23 January, the star Pollux of the constellation Gemini and Mars will be visible 2.36° apart to the North-West; in conjunction. 
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button   class="dropbtn calEntry conjunction"> moon and antares in conjunction <br> <small><sup>25 jan</sup></small> </button>
+                    <button   class="dropbtn calEntry conjunction"> moon and antares in conjunction <br> <sup>25 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        On 25 January, the waning-crescent moon and the star Antares of the constellation Scorpius will be visible 2.26° apart to the East; in conjunction. 
                     </div>
                     <br><br>
                 </div>
                 <div class="dropdown">
-                    <button   class="dropbtn calEntry nwmn"> new moon <br> <small><sup>29 jan</sup></small> </button>
+                    <button   class="dropbtn calEntry nwmn"> new moon <br> <sup>29 jan</sup> </button>
                     <div class="dropdown-content">
-                        meteors are so sick <br> hi
+                        The moon will be new on 29 January.
                     </div>
                     <br><br>
                 </div>
@@ -187,78 +213,52 @@
                 <div class="dropdown">
                     <button class="dropbtn calEntry conjunction">moon and saturn in conjunction <br><sup>1 feb </sup> </button>
                     <div class="dropdown-content">
-                        moon is cool and so is venus <br> hi
+                        On 1 February, the waxing-crescent moon and Saturn will be visible 3.06° apart to the West; in conjunction. 
                     </div>
                     <br> <br>
                 </div>
-                <button class="calEntry conjunction"> moon and saturn in conjunction <br> <small><sup>1 feb</sup></small> </button>
-                <br><br>
-                <button class="calEntry conjunction"> moon and mars in conjunction <br> <small><sup>10 feb</sup></small> </button>
-                <br><br>
-                <button class="calEntry fullmoon"> full moon <br> <small><sup>12 feb</sup></small> </button>
-                <br><br>
-                <button class="calEntry asteroid"> asteroid 29 amphitrite at opposition <br> <small><sup>13 feb</sup></small> </button>
-                <br><br>
-                <button class="calEntry conjunction"> moon and spica in conjunction <br> <small><sup>17 feb</sup></small> </button>
-                <br><br>
-                <button class="calEntry apogee"> lunar apogee <br> <small><sup>18 feb</sup></small> </button>
-                <br><br>
+                <div class="dropdown">
+                    <button class="dropbtn calEntry conjunction">moon and mars in conjunction <br><sup>10 feb </sup> </button>
+                    <div class="dropdown-content">
+                        On 10 February, the waxing-gibbous moon and Mars will be visible 3.22° apart to the North-West; in conjunction. 
+                    </div>
+                    <br> <br>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn calEntry fullmoon"> full moon <br><sup>12 feb </sup> </button>
+                    <div class="dropdown-content">
+                        The moon will be full on 12 February.
+                    </div>
+                    <br> <br>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn calEntry asteroid">asteroid 29 amphitrite at opposition <br><sup>13 feb </sup> </button>
+                    <div class="dropdown-content">
+                        On 13 February, the asteroid 29 Amphitrite will be at opposition - it will reach the closest point to Earth in its orbit. 
+                    </div>
+                    <br> <br>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn calEntry conjunction">moon and spica in conjunction <br><sup>17 feb </sup> </button>
+                    <div class="dropdown-content">
+                        On 17 February, the waning-gibbous moon and the star Spica of Virgo will be visible only 0.24° apart to the East; in conjunction. 
+                    </div>
+                    <br> <br>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn calEntry apogee">lunar apogee <br><sup>18 feb </sup> </button>
+                    <div class="dropdown-content">
+                        On 18 February, the moon will be in apogee; in its elliptical orbit, it will move further from Earth than at any other point during its cycle. Therefore, it will appear 11% smaller than at its closest point, or perigee!
+                    </div>
+                    <br> <br>
+                </div>
             </div>
         </div>
-
-        <!-- <br><hr>
-        <h3> <strong> ~ march ~</strong></h3>
-        <button class="calEntry mercury"> mercury at eastern elongation <br> <small><sup>8 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> moon and pollux in conjunction <br> <small><sup>9 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> moon and regulus in conjunction <br> <small><sup>12 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry asteroid"> asteroid 8 flora at opposition <br> <small><sup>13 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry meteor"> γ-normid meteor shower <br> <small><sup>14 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry lnrEcps"> total lunar eclipse <br> <small><sup>14 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> moon and spica in conjunction <br> <small><sup>17 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry apogee"> lunar apogee <br> <small><sup>18 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry equinox"> equinox <br> <small><sup>20 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry occultation"> antares lunar occultation <br> <small><sup>21 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry comet"> comet 21p/giacobini-zinner passes perihelion <br> <small><sup>25 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry slrEcps"> partial solar eclipse <br> <small><sup>29 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry nwmn"> new moon <br> <small><sup>29 mar</sup></small> </button>
-        <br><br>
-        <button class="calEntry perigee"> moon at perigee <br> <small><sup>30 mar</sup></small> </button>
-        <br><br>
-
-        <br><hr>
-        <h3> <strong> ~ april ~</strong></h3>
-        <button class="calEntry conjunction"> moon and regulus in conjunction <br> <small><sup>9 apr</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> mercury and saturn in conjunction <br> <small><sup>11 apr</sup></small> </button>
-        <br><br>
-        <button class="calEntry fullmoon"> full moon <br> <small><sup>13 apr</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> moon and antares in conjunction <br> <small><sup>17 apr</sup></small> </button>
-        <br><br>
-        <button class="calEntry conjunction"> mercury and neptune in conjunction <br> <small><sup>17 apr</sup></small> </button>
-        <br><br>
-        <button class="calEntry mercury"> mercury at western elongation <br> <small><sup>22 apr</sup></small> </button>
-        <br><br>
-        <button class="calEntry meteor"> lyrid meteor shower <br> <small><sup>22 apr</sup></small> </button>
-        <br><br>
-        <button class="calEntry meteor"> π-puppid meteor shower <br> <small><sup>23 apr</sup></small> </button>
-        <br><br>
-    </div> -->
+    </div>
     <br>
 
 <script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/searchBar.js"></script>
 
 </body>
 </html>

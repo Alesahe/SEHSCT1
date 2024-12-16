@@ -9,6 +9,7 @@
     <link rel="icon" href="favicon.png" type="image/icon type">
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="../css/navbarstyle.css">
+    <link rel="stylesheet" href="../css/searchBar.css">
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -23,6 +24,17 @@
                 <input type="text" placeholder="Search..." name="search" id="searchInput">
                 <button type="submit" id="searchSubmit"><i class="fa fa-search"></i></button>
             </form>
+            <table id="potentialSearchResults">
+                <thead>
+                    <tr id="tableHeader">
+                        <th style="width: 90px;"> Date </th>
+                        <th style="width: 130px;"> Event </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- searchBar.js adds rows here based on the search input -->
+                </tbody>
+            </table>
         </div>
         <a href="javascript:void(0);" class="icon" style="background-color: var(--background-colour);" onclick="resizeNavbar()">
             <i class="fa fa-bars" id="menubar" style="color: var(--main-colour) !important;"></i>
@@ -40,7 +52,11 @@
     <hr>
 
     <div class="loginCentreBox">
-        <h2 style="text-align: center;"> <strong> Login </strong> </h2>
+        <h2 id="notifHeading"> Notification Settings </h2>
+        <div class="msg" id="notifErrorMessage"></div>
+        <br>
+        <button id="enableNotifs"> enable notifications </button>
+        <!-- <h2 style="text-align: center;"> <strong> Login </strong> </h2>
         <h3 style="text-align: center;"> <strong> please fill in your login details! </strong> </h3>
         <form action="" method="post">
             <div class="form-group">
@@ -58,10 +74,13 @@
                 <input type = "submit" name = "submit" id="submit" class="btn btn-primary" value ="submit">
             </div>
         </form>
-        <a href="register.php" style="color: #9ad6fc; text-align:left !important;"> sign up </a>
+        <a href="register.php" style="color: #9ad6fc; text-align:left !important;"> sign up </a> -->
     </div>
     <br> <br> <br>
 
-    <script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/notif.js"></script>
+<script type="text/javascript" src="../js/searchBar.js"></script>
+
 </body>
 </html>

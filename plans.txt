@@ -23,6 +23,7 @@ events:
 - 23 jan: mars and pollux in conjunction
 - 25 jan: moon and antares in conjunction
 - 29 jan: new moon
+
 - 1 feb: moon and saturn in conjunction
 - 10 feb: moon and mars in conjunction
 - 12 feb: full moon
@@ -60,8 +61,16 @@ ideas
     - toggled text size
 
 to-do:
-- add icon
-- make other pages
-- time and date?
-- log in system
-    - make log in button separate from dashboard
+- jump links
+
+- use notification api
+
+small bgu fixes:
+- make it only query the database after two seconds of a key not being pressed or smth
+- fix menu (how to make it active and change colour as well?)
+- make sure it's accessible
+- fix weird dropdown toggle (out, in, out)
+- add toggle (user can control which events notifs for)
+- make stuff look good with bootstrap
+
+Fix how when the screen is of restricted size, only the home tab displays

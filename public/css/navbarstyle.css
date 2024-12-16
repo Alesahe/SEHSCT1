@@ -1,9 +1,15 @@
+#searchBarForm {
+    overflow: visible !important;
+    z-index: 100;
+}
+
 .topnav {
-    overflow: hidden;
+    /* overflow: hidden; */
     border-bottom: solid var(--main-colour);
     background-color: var(--background-colour);
-    top:0;
+    top: 0;
     width: 100%;
+    max-height: 60px;
     position: fixed;
     z-index: 2;
     font-family: "Goudy Bookletter 1911";
@@ -36,6 +42,7 @@
 .topnav .search-container {
     float: right;
     margin:auto;
+    /* overflow: auto; */
 }
 
 .topnav input[type=text] {

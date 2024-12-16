@@ -1,0 +1,37 @@
+#potentialSearchResults {
+    /* display: none; */
+    max-height: 100px !important;
+    top: 7px;
+    font-family: Roboto !important;
+    width: 255px;
+    font-size: 20px;
+    position: relative;
+    background-color: var(--background-colour);
+    border-collapse: collapse;
+    /* border: solid var(--main-colour); */
+    border-bottom: solid var(--main-colour);
+    border-left: solid var(--main-colour);
+    border-right: solid var(--main-colour);
+    vertical-align: top !important;
+    overflow-y: scroll !important;
+}
+
+#tableHeader {
+    display: none;
+}
+
+th {
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+}
+
+td {
+    padding-top: 5px;
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+/* 
+make it naturally display none and when its in validentreis you make display: auto; or smth 
+*/
