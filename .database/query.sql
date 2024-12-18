@@ -1,8 +1,10 @@
+-- routinely generating tables
 CREATE TABLE events (
     date INT NOT NULL,
     month TEXT NOT NULL,
     eventtype TEXT NOT NULL,
-    eventname TEXT NOT NULL
+    eventname TEXT NOT NULL,
+    jumplink TEXT NOT NULL
 );
 
 -- jan
@@ -38,6 +40,9 @@ INSERT INTO events (date, month, eventtype, eventname) VALUES (18, "february", "
 -- test data!
 INSERT INTO events (date, month, eventtype, eventname) VALUES (17, "december", "yah", "hellooo");
 INSERT INTO events (date, month, eventtype, eventname) VALUES (18, "december", "yah", "yippee!");
+INSERT INTO events (date, month, eventtype, eventname) VALUES (19, "december", "asd", "a;askjlf");
+INSERT INTO events (date, month, eventtype, eventname) VALUES (19, "december", "nah", "awio");
+
 
 -- delete test data!
 DELETE FROM events WHERE month="december";
