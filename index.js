@@ -7,7 +7,7 @@ import sqlite3 from "sqlite3";
 import bodyParser from 'body-parser';
 
 // var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database(".database/events.db");
+var db = new sqlite3.Database(".database/main.db");
 
 const port = 5500;
 const hostname = '127.0.0.1';
@@ -19,6 +19,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// rerouting urls to make it more readable and safer
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'public/html/index.html'));
 });
