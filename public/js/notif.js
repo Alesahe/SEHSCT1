@@ -1,7 +1,7 @@
 // define global variables yay
 const notifBtn = document.getElementById("enableNotifs");
 const d  = new Date();
-let lastSent;
+let lastSent = localStorage.getItem("lastSent");
 let currDate = d.getDate();
 let currMonth = d.getMonth();
 
@@ -88,7 +88,8 @@ function convertDate (date){
 
     // post request for dates of things
     if (lastSent!=currDate){
-        lastSent=currDate;
+        localStorage.setItem("lastSent", currDate);
+        lastSent = localStorage.getItem("lastSent");
         await fetch("/notifDates", {
             method: "POST",
             body: JSON.stringify ({
