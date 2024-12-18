@@ -34,3 +34,10 @@ INSERT INTO events (date, month, eventtype, eventname) VALUES (12, "february", "
 INSERT INTO events (date, month, eventtype, eventname) VALUES (13, "february", "asteroid", "asteroid 29 amphitrite at opposition");
 INSERT INTO events (date, month, eventtype, eventname) VALUES (17, "february", "conjunction", "moon and spica in conjunction");
 INSERT INTO events (date, month, eventtype, eventname) VALUES (18, "february", "apogee", "lunar apogee");
+
+-- test data!
+INSERT INTO events (date, month, eventtype, eventname) VALUES (17, "december", "yah", "hellooo");
+INSERT INTO events (date, month, eventtype, eventname) VALUES (18, "december", "yah", "yippee!");
+
+-- delete test data!
+DELETE FROM events WHERE month="december";
