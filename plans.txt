@@ -67,7 +67,7 @@ to-do:
 - manifest.json
 - whats up with your search bar when you press prtsc ;-;
 
-small bgu fixes:
+simply bug fixes:
 - third column with all of the previous together
 - make it only query the database after two seconds of a key not being pressed or smth
 - make search bar background --main-colour
@@ -78,8 +78,16 @@ small bgu fixes:
 - make stuff look good with bootstrap
 - Fix how when the screen is of restricted size, only the home tab displays
 
-big bug fixes:
+annoying bug fixes:
 - dynamically render the page :sob:
+- so like you dynamically change the button that asks for notif perms but like when you refresh it resets it ;-;
 
 code readability fixes:
 - import/export w/ main.js and searchBar.js code
+
+
+
+notes for me tmr
+- okay ale so youve gotta test the current post request using console.log, 
+then integrate the post request data w/ the function showNotification
+also make it run once a day only
