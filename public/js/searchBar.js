@@ -43,7 +43,7 @@ function displayResults(validEntries) {
         
         // create new cells within the rows and add information into cells to display
         const newCell = newRow.insertCell(0);
-        newCell.innerHTML = '<a href="#j1">'+validEntries[i][0] + " " + validEntries[i][1] + " " + validEntries[i][2]+'</a>';
+        newCell.innerHTML = '<a href="/#j1">'+validEntries[i][0] + " " + validEntries[i][1] + " " + validEntries[i][2]+'</a>';
         newCell.classList.add("anchor-link");
         // console.log(newCell);
     }
