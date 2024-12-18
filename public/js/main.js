@@ -1,3 +1,5 @@
+// export {addCal, addMonth}; // export the following functions (to searchBar.js)
+
 // responsive navbar
 function resizeNavbar() {
     var x = document.getElementById("topnavbar");
@@ -23,29 +25,38 @@ function displayDateTime() {
 // dropdown shenanigans
 let pause;
 
-// toggles the addition of the dropdown bar and button change MONTHS ONLY
 $(document).ready(function(){
-    $(".month").click(function(){
+    // toggles the addition of the dropdown bar and button change MONTHS ONLY
+    function addMonth(clicked){
         // revert other (all) month dropdown bar
         $(".month").removeClass('dropCal');
 
         // add dropdown and change style of pressed bar
-        $(this).siblings().slideDown("slow");
-        $(this).addClass('dropCal');
+        $(clicked).siblings().slideDown("slow");
+        $(clicked).addClass('dropCal');
 
         //get rid of timeout revert if this is pressed
         clearTimeout(pause);
+    }
+    
+    // calls above function when element of "month" class is called
+    $(".month").click(function() {
+        addMonth(this);
     });
-});
 
-// addition of  dropdown bar and button change
-$(document).ready(function(){
-    $(".calEntry").click(function(){
-        $(this).siblings().slideDown("slow");
-        $(this).addClass('dropCal');
+    // addition of  dropdown bar and button change
+    function addCal(clicked){
+        $(clicked).siblings().slideDown("slow");
+        $(clicked).addClass('dropCal');
         
         //get rid of timeout revert if this is pressed
         clearTimeout(pause);
+    }
+    
+    // calls above function when element of "calEntry" class is called
+    $(".calEntry").click(function() {
+        addCal(this);
+        // console.log(this);
     });
 });
 
