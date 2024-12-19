@@ -63,7 +63,6 @@ ideas
 to-do:
 - jump links
 
-- use notification api
 - manifest.json
 - whats up with your search bar when you press prtsc ;-;
 
@@ -84,10 +83,3 @@ annoying bug fixes:
 
 code readability fixes:
 - import/export w/ main.js and searchBar.js code
-
-
-
-notes for me tmr
-- okay ale so youve gotta test the current post request using console.log, 
-then integrate the post request data w/ the function showNotification
-also make it run once a day only
