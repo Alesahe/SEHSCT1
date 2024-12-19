@@ -68,9 +68,9 @@ function convertDate (date){
     }
 
     // create and show the notification
-    const showNotification = (title) => {
-        const newNotif = new Notification(`${title}`, {
-            body: "placeholder text",
+    const showNotification = (info) => {
+        const newNotif = new Notification(`${info[2]}`, {
+            body: info[0] + " " + info[1] + ": " + info[3],
             icon: "../favicon.png",
             vibrate: true
         });
@@ -105,7 +105,7 @@ function convertDate (date){
                 throw new Error("notif response invalid ;-;");
             };
             const dates = await response.json();
-            for (let i = 0; i<dates.length; i++) showNotification(dates);
+            for (let i = 0; i<dates.length; i++) showNotification(dates[i]);
             return await response;
         })
     }

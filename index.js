@@ -57,7 +57,7 @@ app.post("/notifDates", function(req, res) {
         }
         let validRes=[];
         for (let i=0; i<rows.length; i++) {
-            validRes.push([rows[i].date, rows[i].month, rows[i].eventname]);
+            validRes.push([rows[i].date, rows[i].month, rows[i].eventname, rows[i].details]);
         }
         
         console.log(validRes);
