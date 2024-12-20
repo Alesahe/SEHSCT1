@@ -63,9 +63,14 @@ to-do:
 - jump links
 
 - manifest.json
+- write your home page (basic description of what app does)
+- accessibility considerations
+- improve dashboard page (maybe alter light and dark mode)
 - whats up with your search bar when you press prtsc ;-;
 
 simply bug fixes:
+    - the Calentrys dont close when you open another one at the end
+    - the anchor links dont work when you click the button and the tab isn't alr calendar
 - third column with all of the previous together
 - make it only query the database after two seconds of a key not being pressed or smth
 - make search bar background --main-colour

@@ -34,7 +34,7 @@ function displayResults(validEntries) {
     document.getElementById("potentialSearchResults").style.display = "table";
 
     // loop through array of arrays of events
-    console.log(Math.min(validEntries.length, 6))
+    // console.log(Math.min(validEntries.length, 6))
     for (let i=0; i<Math.min(validEntries.length, 6); i++){
         const tableBody = document.getElementById("potentialSearchResults").getElementsByTagName("tbody")[0];  
         
@@ -43,9 +43,9 @@ function displayResults(validEntries) {
         
         // create new cells within the rows and add information into cells to display
         const newCell = newRow.insertCell(0);
-        newCell.innerHTML = '<a href="calendar/#j1">'+validEntries[i][0] + " " + validEntries[i][1] + " " + validEntries[i][2]+'</a>';
-        newCell.classList.add("anchor-link");
-        // console.log(newCell);
+        // newCell.innerHTML = `<a href="../calendar#j1" class="anchor-link" onclick="jumpToAnchor('` + validEntries[i][1] + `', '` + validEntries[i][3] + `')">` +validEntries[i][0] + ` ` + validEntries[i][1] + ` ` + validEntries[i][2] + `</a>`;
+        newCell.innerHTML = `<a href="../calendar#` + validEntries[i][3] + `" class="anchor-link" onclick="jumpToAnchor('` + validEntries[i][1] + `', '` + validEntries[i][3] + `')">` +validEntries[i][0] + ` ` + validEntries[i][1] + ` ` + validEntries[i][2] + `</a>`;
+        console.log(newCell.innerHTML);
     }
 }
 
@@ -90,29 +90,10 @@ function addCal(clicked){
 }
 
 // callign above functions through anchor links in the search retuls
-var elements = document.getElementsByClassName("a");
-
-var jumpToAnchor = function() {
-    document.querySelectorAll('.anchor-link').forEach(function(element) {
-        addMonth(document.getElementById("jan"));
-        addCal(document.getElementById("j1"));
-        console.log("he");
-    });
+function jumpToAnchor(month, elemID) {
+    // console.log(month + " " + elemID);
+    // console.log(typeof(month)+ " " + typeof(elemID));
+    addMonth(document.getElementById(month));
+    addCal(document.getElementById(elemID));
+    console.log("he");
 };
-
-for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener("click", jumpToAnchor, false);
-    console.log("here");
-}
-
-// document.getElementsByClassName("a").onclick = function(event) {
-//     console.log(event.target);
-//     // if (event.target.tagName.toLowerCase() === "a"){
-//         // console.log("ha");
-//         document.querySelectorAll('.anchor-link').forEach(function(element) {
-//             addMonth(document.getElementById("jan"));
-//             addCal(document.getElementById("j1"));
-//             console.log("he");
-//         });
-//     // }
-// }

@@ -44,7 +44,7 @@ app.post("/performsearch", function (req, res) {
         let validResults=[];
         for(let i = 0; i < rows.length; i++) {
             // console.log(rows[i].eventname);
-            validResults.push([rows[i].date, rows[i].month, rows[i].eventname]);
+            validResults.push([rows[i].date, rows[i].month, rows[i].eventname, rows[i].jumplink]);
         }
         // console.log(validResults);
         res.json(validResults);
