@@ -11,7 +11,6 @@ var db = new sqlite3.Database(".database/main.db");
 
 const port = 5500;
 const hostname = '127.0.0.1';
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
@@ -33,6 +32,8 @@ app.get("/calendar", (req, res) => {
     res.sendFile(path.join(__dirname, 'public/html/calendar.html'));
 });
 
+
+//post requests
 app.post("/performsearch", function (req, res) {
     // console.log("here");
     // console.log(req.body.search);

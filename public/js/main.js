@@ -1,5 +1,34 @@
 // export {addCal, addMonth}; // export the following functions (to searchBar.js)
 
+//redirect links with /calendar in front
+const currURL = new URL(window.location.href).pathname;
+console.log(currURL);
+
+const toRedirect = {
+    index: "/",
+    dashboard: "/dashboard",
+    recent: "/recent",
+    calendar: "/calendar"
+};
+
+const tab = () => {
+    if (currURL=="https://127.0.0.1:5500/calendar/") return "index";
+    else if (currURL=="https://127.0.0.1:5500/calendar/dashboard") return "dashboard";
+    else if (currURL=="https://127.0.0.1:5500/calendar/recent") return "recent";
+    else if (currURL=="https://127.0.0.1:5500/calendar/calendar") return "calendar";
+    return null;
+};
+
+const redirect = () => {
+    let os = tab();
+    if (os in toRedirect) {
+        location.replace(toRedirect[os]);
+    }
+};
+
+redirect();
+
+
 // responsive navbar
 function resizeNavbar() {
     var x = document.getElementById("topnavbar");
