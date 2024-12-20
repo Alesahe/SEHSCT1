@@ -55,9 +55,8 @@ events:
 
 
 ideas
-- dark/light mode
 - inclusivity
-    - screen reader
+    - screen reader - alr works
     - toggled text size
 
 to-do:
@@ -74,7 +73,6 @@ simply bug fixes:
 - make sure it's accessible
 - fix weird dropdown toggle (out, in, out)
 - add toggle (user can control which events notifs for)
-- make stuff look good with bootstrap
 - Fix how when the screen is of restricted size, only the home tab displays
 
 annoying bug fixes:
