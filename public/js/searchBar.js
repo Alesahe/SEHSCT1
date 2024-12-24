@@ -93,6 +93,10 @@ function addCal(clicked){
 function jumpToAnchor(month, elemID) {
     // console.log(month + " " + elemID);
     // console.log(typeof(month)+ " " + typeof(elemID));
+    $(document).ready(function(){
+        $(".dropdown-content").hide();
+        $(".dropbtn").removeClass('dropCal');
+    });
     addMonth(document.getElementById(month));
     addCal(document.getElementById(elemID));
     console.log("he");

@@ -91,6 +91,16 @@ $(document).ready(function(){
 
 // closes the dropdown menu and reverts the button style if the user clicks outside of it
 window.onclick = function(event) {
+    // if (event.target.matches(".dropdown") && !event.target.matches(".anchor-link")){
+    //     $(document).ready(function(){
+    //         $(".dropdown-content").slideUp("slow");
+    //     });
+    //     pause = setTimeout(function(){
+    //         $(".dropbtn").removeClass('dropCal');
+    //     }, 600);
+        
+        
+    // } else 
     if (!event.target.matches('.dropbtn') && !event.target.matches('.dropdown-content') && !event.target.matches(".dropdown") && !event.target.matches(".anchor-link")) { // || (event.target.style.opacity==1)
         $(document).ready(function(){
             $(".dropdown-content").slideUp("slow");
