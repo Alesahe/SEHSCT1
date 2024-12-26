@@ -60,15 +60,16 @@ ideas
     - toggled text size
 
 to-do:
-- manifest.json
-- write your home page (basic description of what app does)
 - accessibility considerations
+- debug (below)
 - improve dashboard page (maybe alter light and dark mode)
 - whats up with your search bar when you press prtsc ;-;
 
 simple bug fixes:
     - the anchor links dont work when you click the button and the tab isn't alr calendar
+- so like you dynamically change the button that asks for notif perms but like when you refresh it resets it ;-;
 - make it only query the database after two seconds of a key not being pressed or smth
+
 - make search bar background --main-colour
 - fix menu (how to make it active and change colour as well?)
 - make sure it's accessible
@@ -79,7 +80,6 @@ simple bug fixes:
 
 annoying bug fixes:
 - dynamically render the page :sob:
-- so like you dynamically change the button that asks for notif perms but like when you refresh it resets it ;-;
 
 code readability fixes:
 - import/export w/ main.js and searchBar.js code
