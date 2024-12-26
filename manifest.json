@@ -1,0 +1,16 @@
+{
+    "name": "Astral Projections",
+    "short_name": "AP",
+    "theme_color": "#ebf7ff",
+    "background_color": "#030c47",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "http://127.0.0.1:5500/",
+    "description": "A free, open-source, all-in-one calendar for your astronomical needs!",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "favicon.ico"
+        }
+    ]
+}
