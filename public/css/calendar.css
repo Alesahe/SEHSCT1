@@ -133,9 +133,10 @@ img {
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
-    padding-left: 75px;
+    padding-left: 65px;
     padding-top: 25px;
     padding-bottom: 25px;
+    padding-right: 50px;
     text-align: left;
     /* position: absolute; */
     background-color: var(--background-colour);
@@ -161,3 +162,11 @@ img {
 .show {
     display:block;
 } 
+
+form:focus-within{
+    outline: button;
+}
+
+input:focus-within{
+    outline: 0px or smth
+}

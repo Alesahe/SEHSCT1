@@ -87,6 +87,7 @@ function convertDate (date){
     }
 
     // post request for dates of things
+    // console.log(lastSent);
     if (lastSent!=currDate){
         localStorage.setItem("lastSent", currDate);
         lastSent = localStorage.getItem("lastSent");

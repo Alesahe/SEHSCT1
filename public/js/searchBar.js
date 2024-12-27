@@ -45,7 +45,7 @@ function displayResults(validEntries) {
         const newCell = newRow.insertCell(0);
         // newCell.innerHTML = `<a href="../calendar#j1" class="anchor-link" onclick="jumpToAnchor('` + validEntries[i][1] + `', '` + validEntries[i][3] + `')">` +validEntries[i][0] + ` ` + validEntries[i][1] + ` ` + validEntries[i][2] + `</a>`;
         newCell.innerHTML = `<a href="../calendar#` + validEntries[i][3] + `" class="anchor-link" onclick="jumpToAnchor('` + validEntries[i][1] + `', '` + validEntries[i][3] + `')">` +validEntries[i][0] + ` ` + validEntries[i][1] + ` ` + validEntries[i][2] + `</a>`;
-        console.log(newCell.innerHTML);
+        // console.log(newCell.innerHTML);
     }
 }
 
@@ -91,13 +91,15 @@ function addCal(clicked){
 
 // callign above functions through anchor links in the search retuls
 function jumpToAnchor(month, elemID) {
-    // console.log(month + " " + elemID);
-    // console.log(typeof(month)+ " " + typeof(elemID));
+    // jump to calendar tab if not already there
+    const currTab = window.location.href;
+    // console.log(currTab);
+
+    // load anchor links
     $(document).ready(function(){
         $(".dropdown-content").hide();
         $(".dropbtn").removeClass('dropCal');
     });
     addMonth(document.getElementById(month));
     addCal(document.getElementById(elemID));
-    console.log("he");
 };
