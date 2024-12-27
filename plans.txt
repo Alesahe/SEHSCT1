@@ -69,22 +69,21 @@ to-do:
 - improve dashboard page (maybe alter light and dark mode)
 - whats up with your search bar when you press prtsc ;-;
 
-simple bug fixes:
-    - the anchor links dont work when you click the button and the tab isn't alr calendar
-- so like you dynamically change the button that asks for notif perms but like when you refresh it resets it ;-;
-- make it only query the database after two seconds of a key not being pressed or smth
+necessary bug fixes:
+- make the notificaito button look aesthetic
+- breaks when screen is small, mostlikely due to overflow:hidden
 
 - make search bar background --main-colour
-- fix burger menu (how to make it active and change colour as well?)
 - slide up when dropdown title is pressed as well (it's more intuitive)
 - fix weird dropdown toggle (out, in, out)
-- add toggle (user can control which events notifs for)
-- Fix how when the screen is of restricted size, only the home tab displays
 - why is the recent tab a different height ahariowhedxnk
 - test on different browsers (literally so much doesnt work on edge :sob:)
 
 annoying bug fixes:
-- dynamically render the page :sob:
+- fix burger menu (how to make it active and change colour as well?)
+- the anchor links dont work when you click the button and the tab isn't alr calendar
+- add toggle (user can control which events notifs for)
+- make it only query the database after two seconds of a key not being pressed or smth
 
 code readability fixes:
 - import/export w/ main.js and searchBar.js code
