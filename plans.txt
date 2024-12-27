@@ -60,8 +60,12 @@ ideas
     - toggled text size
 
 to-do:
-- accessibility considerations
 - debug (below)
+- storyboard
+- accessibility considerations
+- make the search button do something
+- fix comments
+- directory structure
 - improve dashboard page (maybe alter light and dark mode)
 - whats up with your search bar when you press prtsc ;-;
 
@@ -71,12 +75,13 @@ simple bug fixes:
 - make it only query the database after two seconds of a key not being pressed or smth
 
 - make search bar background --main-colour
-- fix menu (how to make it active and change colour as well?)
-- make sure it's accessible
+- fix burger menu (how to make it active and change colour as well?)
+- slide up when dropdown title is pressed as well (it's more intuitive)
 - fix weird dropdown toggle (out, in, out)
 - add toggle (user can control which events notifs for)
 - Fix how when the screen is of restricted size, only the home tab displays
 - why is the recent tab a different height ahariowhedxnk
+- test on different browsers (literally so much doesnt work on edge :sob:)
 
 annoying bug fixes:
 - dynamically render the page :sob:
