@@ -45,7 +45,7 @@ function displayResults(validEntries) {
         const newCell = newRow.insertCell(0);
         // newCell.innerHTML = `<a href="../calendar#j1" class="anchor-link" onclick="jumpToAnchor('` + validEntries[i][1] + `', '` + validEntries[i][3] + `')">` +validEntries[i][0] + ` ` + validEntries[i][1] + ` ` + validEntries[i][2] + `</a>`;
         newCell.innerHTML = `<a href="../calendar#` + validEntries[i][3] + `" class="anchor-link" onclick="jumpToAnchor('` + validEntries[i][1] + `', '` + validEntries[i][3] + `')">` +validEntries[i][0] + ` ` + validEntries[i][1] + ` ` + validEntries[i][2] + `</a>`;
-        // console.log(newCell.innerHTML);
+        console.log(newCell.innerHTML);
     }
 }
 

@@ -1,24 +1,34 @@
 // define global variables yay
 const notifBtn = document.getElementById("enableNotifs");
+const msg = document.querySelector(".msg");
 const d  = new Date();
 let lastSent = localStorage.getItem("lastSent");
 let currDate = d.getDate();
 let currMonth = d.getMonth();
 
+// adapt notification settings screen based on notification permissions
+if (Notification.permission === "granted"){
+    msg.textContent = "You have already enabled notifications."
+    notifBtn.style.display = "none";
+} else if (Notification.permission === "denied"){
+    msg.style.display = "block";
+    msg.textContent = "Your notifications are turned off.";
+    notifBtn.style.display = "none";
+}
+
 // when notifBtn is clicked, make the popup at the top work
 function askNotifPermission() {
     function handlePermission(permission) {
-        const msg = document.querySelector(".msg");
-        
         // browser stores information regardless
         if (!Reflect.has(Notification, "permission")) {
             Notification.permission = permission;
         }
 
         // Set the button to shown or hidden, depending on what the user answers
-        if (Notification.permission === "denied" || Notification.permission === "default") {
+        if (Notification.permission === "denied") {
             msg.style.display = "block";
             msg.textContent = "Your notifications are turned off.";
+            notifBtn.style.display = "none";
         } else {
             msg.textContent = "You have already enabled notifications."
             notifBtn.style.display = "none";
