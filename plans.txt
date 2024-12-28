@@ -70,7 +70,7 @@ to-do:
 - whats up with your search bar when you press prtsc ;-;
 
 necessary bug fixes:
-- burger menu and search bar breaks when screen is small, mostlikely due to set height
+- search bar breaks when screen is small
 - search button does nothing-
 - slide up when dropdown title is pressed as well (it's more intuitive)
     - and make the calentries centred :sob:

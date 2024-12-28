@@ -10,7 +10,7 @@
     background-color: var(--background-colour);
     top: 0;
     width: 100%;
-    height: 65px !important;
+    height: 65px;
     position: fixed;
     z-index: 2;
     font-family: "Goudy Bookletter 1911";
@@ -91,7 +91,10 @@ span {
 }
 
 @media screen and (max-width: 700px) {
-    .topnav.responsive {position: relative;}
+    .topnav.responsive {
+        position: relative;
+        height: 325px; 
+    }
     .topnav.responsive .icon {
         position: absolute;
         right: 0;
@@ -124,10 +127,6 @@ span {
     top: 8px;
 }
 
-/* form:focus-within{
-    outline: ;
+#menubar {
+    font-size: 17px;
 }
-
-input:focus-within{
-    outline: ;
-} */

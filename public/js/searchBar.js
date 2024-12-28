@@ -103,3 +103,5 @@ function jumpToAnchor(month, elemID) {
     addMonth(document.getElementById(month));
     addCal(document.getElementById(elemID));
 };
+
+// adjustments for when page is small
