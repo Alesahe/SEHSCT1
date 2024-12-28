@@ -70,12 +70,10 @@ to-do:
 - whats up with your search bar when you press prtsc ;-;
 
 necessary bug fixes:
-- make the notificaito button look aesthetic
-- breaks when screen is small, mostlikely due to overflow:hidden
-
-- make search bar background --main-colour
+- burger menu and search bar breaks when screen is small, mostlikely due to set height
+- search button does nothing-
 - slide up when dropdown title is pressed as well (it's more intuitive)
-- fix weird dropdown toggle (out, in, out)
+    - and make the calentries centred :sob:
 - why is the recent tab a different height ahariowhedxnk
 - test on different browsers (literally so much doesnt work on edge :sob:)
 

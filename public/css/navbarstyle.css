@@ -1,6 +1,7 @@
 #searchBarForm {
     overflow: visible !important;
     z-index: 100;
+
 }
 
 .topnav {
@@ -107,16 +108,26 @@ span {
     /* font-size: 30px; */
     text-align: right;
     padding-right: 300px;
-    padding-top: 10px;
+    padding-top: 14px;
 }
 
 #searchInput {
     position: relative;
     color: var(--background-colour);
-    top: 7px;
+    top: 8px;
+    background-color: var(--main-colour);
+    z-index:100;
 }
 
 #searchSubmit {
     position: relative;
-    top: 7px;
+    top: 8px;
 }
+
+/* form:focus-within{
+    outline: ;
+}
+
+input:focus-within{
+    outline: ;
+} */

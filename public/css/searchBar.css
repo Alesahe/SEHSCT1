@@ -1,4 +1,5 @@
 #potentialSearchResults {
+    display: none;
     top: 7px;
     font-family: Roboto !important;
     width: 255px;
