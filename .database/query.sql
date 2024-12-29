@@ -45,6 +45,7 @@ INSERT INTO events (date, month, eventtype, eventname, jumplink, details) VALUES
     -- INSERT INTO events (date, month, eventtype, eventname, jumplink, details) VALUES (19, "december", "nah", "awio", "[]", "[]");
 -- INSERT INTO events (date, month, eventtype, eventname, jumplink, details) VALUES (19, "december", "apogee", "lunar apogee", "[]", "On 19 December, the waning-crescent moon and the star Antares of the constellation Scorpius will be visible 2.26° apart to the East.");
 -- INSERT INTO events (date, month, eventtype, eventname, jumplink, details) VALUES (26, "december", "apogee", "lunar apogee", "[]", "On 19 December, the waning-crescent moon and the star Antares of the constellation Scorpius will be visible 2.26° apart to the East.");
+INSERT INTO events (date, month, eventtype, eventname, jumplink, details) VALUES (30, "december", "apogee", "lunar apogee", "[]", "On 19 December, the waning-crescent moon and the star Antares of the constellation Scorpius will be visible 2.26° apart to the East.");
 
 -- delete test data!
 DELETE FROM events WHERE month="december";
