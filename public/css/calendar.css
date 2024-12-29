@@ -152,12 +152,6 @@ img {
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
 .dropdown-content .dropdown {
     display: block;
     margin-left: auto;
@@ -167,4 +161,23 @@ img {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display:block;
+}
+
+/* accommodate for small screen sizes */
+@media screen and (max-width: 600px) {
+    .dropdown-content:not(.dropdown) {
+        font-size: 15px !important;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .month {
+        width: 100% !important;
+    }
+    .calEntry {
+        width: 100% !important;
+        padding-left: 45px !important;
+        padding-top: 45px !important;
+        padding-bottom: 45px !important;
+        font-size: 20px !important;
+    }
 }

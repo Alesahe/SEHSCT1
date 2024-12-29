@@ -62,16 +62,13 @@ ideas
 to-do:
 - debug (below)
 - storyboard
-- accessibility considerations
-- make the search button do something
-- fix comments
+- accessibility considerations (in logbook)
+- fix comments n references, clean up code
 - directory structure
-- improve dashboard page (maybe alter light and dark mode)
 - whats up with your search bar when you press prtsc ;-;
 
 necessary bug fixes:
 - slide up when dropdown title is pressed as well (it's more intuitive)
-    - and make the calentries centred :sob:
 - why is the recent tab a different height ahariowhedxnk
 - test on different browsers (literally so much doesnt work on edge :sob:)
 
