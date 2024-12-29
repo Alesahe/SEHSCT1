@@ -158,15 +158,13 @@ img {
     display: block;
 }
 
+.dropdown-content .dropdown {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display:block;
-} 
-
-form:focus-within{
-    outline: button;
-}
-
-input:focus-within{
-    outline: 0px or smth
 }
