@@ -68,8 +68,9 @@ to-do:
 - whats up with your search bar when you press prtsc ;-;
 
 necessary bug fixes:
-- slide up when dropdown title is pressed as well (it's more intuitive)
+- the search button doesn't do anything again urgh
 - why is the recent tab a different height ahariowhedxnk
+- test the notification thing again cause service worker might mess with it maybe (prolly not)
 - test on different browsers (literally so much doesnt work on edge :sob:)
 
 annoying bug fixes:

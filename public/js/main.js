@@ -53,7 +53,9 @@ function displayDateTime() {
 
 // dropdown shenanigans
 let pause;
+let boolean = 0; // 0 when just closed, 1 when just opened
 
+// adds the dropdowns
 $(document).ready(function(){
     // toggles the addition of the dropdown bar and button change MONTHS ONLY
     function addMonth(clicked){
@@ -66,11 +68,12 @@ $(document).ready(function(){
 
         //get rid of timeout revert if this is pressed
         clearTimeout(pause);
+        boolean = 1;
     }
     
     // calls above function when element of "month" class is called
     $(".month").click(function() {
-        addMonth(this);
+        if (!this.classList.contains("dropCal")) addMonth(this);
     });
 
     // addition of  dropdown bar and button change
@@ -80,27 +83,18 @@ $(document).ready(function(){
         
         //get rid of timeout revert if this is pressed
         clearTimeout(pause);
+        boolean = 1;
     }
     
     // calls above function when element of "calEntry" class is called
     $(".calEntry").click(function() {
-        addCal(this);
+        if (!this.classList.contains("dropCal")) addCal(this);
         // console.log(this);
     });
 });
 
 // closes the dropdown menu and reverts the button style if the user clicks outside of it
 window.onclick = function(event) {
-    // if (event.target.matches(".dropdown") && !event.target.matches(".anchor-link")){
-    //     $(document).ready(function(){
-    //         $(".dropdown-content").slideUp("slow");
-    //     });
-    //     pause = setTimeout(function(){
-    //         $(".dropbtn").removeClass('dropCal');
-    //     }, 600);
-        
-        
-    // } else 
     if (!event.target.matches('.dropbtn') && !event.target.matches('.dropdown-content') && !event.target.matches(".dropdown") && !event.target.matches(".anchor-link")) { // || (event.target.style.opacity==1)
         $(document).ready(function(){
             $(".dropdown-content").slideUp("slow");
@@ -108,7 +102,13 @@ window.onclick = function(event) {
         pause = setTimeout(function(){
             $(".dropbtn").removeClass('dropCal');
         }, 600);
-        // console.log(event.target);
+    } else if (event.target.matches(".dropCal") && boolean==0){
+        $(document).ready(function(){
+            $(event.target).siblings(".dropdown-content").slideUp("slow");
+        });
+        pause = setTimeout(function(){
+            $(event.target).removeClass('dropCal');
+        }, 600);
     } else if (event.target.matches('.dropbtn')){
         $(document).ready(function(){
             $(event.target).parent().siblings().children(".dropdown-content").slideUp("slow");
@@ -116,7 +116,6 @@ window.onclick = function(event) {
         pause = setTimeout(function(){
             $(event.target).parent().siblings().children(".calEntry").removeClass("dropCal");
         }, 600);
-        // console.log("two");
     } else if (event.target.matches(".dropdown-content")){
         $(document).ready(function(){
             $(event.target).children().children(".dropdown-content").slideUp("slow");
@@ -124,7 +123,6 @@ window.onclick = function(event) {
         pause = setTimeout(function(){
             $(event.target).children().children(".calEntry").removeClass("dropCal");
         }, 600);
-        // console.log("three");
     } else if (event.target.matches(".dropdown") && event.target.parentElement.matches(".dropdown-content")){
         $(document).ready(function(){
             $(event.target).children(".dropdown-content").slideUp("slow");
@@ -134,6 +132,6 @@ window.onclick = function(event) {
             $(event.target).children(".calEntry").removeClass("dropCal");
             $(event.target).siblings(".dropdown").children(".calEntry").removeClass("dropCal");
         }, 600);
-        // console.log("four");
     }
+    boolean = 0;
 }

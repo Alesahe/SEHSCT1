@@ -105,10 +105,11 @@ function jumpToAnchor(month, elemID) {
 };
 
 // 
-function searchSubmit(){
-    const submitBtn = document.getElementById("searchSubmit");
+function searchSb(){
+    // const submitBtn = document.getElementById("searchSubmit");
 
     $(document).ready(function(){
-        $(submitBtn).parent().siblings(".table").children(".tbody").firstChild.click();
+        $(document.getElementById("potentialSearchResults")).children(".tbody").firstChild.click();
     });
+    console.log("here");
 }
