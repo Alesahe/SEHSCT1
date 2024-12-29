@@ -24,19 +24,17 @@
         <div class="search-container">
             <form action="" id="searchBarForm">
                 <input type="text" placeholder="Search..." name="search" id="searchInput">
-                <button type="submit" id="searchSubmit" aria-label="submit search"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchSubmit" aria-label="submit search" onclick="searchSb()"><i class="fa fa-search"></i></button>
             </form>
             <table id="potentialSearchResults">
                 <thead>
-                    <tr id="tableHeader">
+                    <tr id="tableHeader" aria-label="date and event search results">
                         <th style="width: 90px;"> Date </th>
                         <th style="width: 130px;"> Event </th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- searchBar.js adds rows here based on the search input -->
-                </tbody>
-            </table>
+                <tbody><!-- searchBar.js adds rows here based on the search input --></tbody>
+            </table> 
         </div>
         <a href="javascript:void(0);" class="icon" style="background-color: var(--background-colour);" onclick="resizeNavbar()">
             <i class="fa fa-bars" id="menubar" style="color: var(--main-colour) !important;"></i>
