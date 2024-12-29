@@ -21,9 +21,9 @@
         <a href="recent">recent</a>
         <a href="calendar">calendar</a>
         <div class="search-container">
-            <form action="" id="searchBarForm">
+            <form action="searchSubmit()" id="searchBarForm">
                 <input type="text" placeholder="Search..." name="search" id="searchInput">
-                <button type="submit" id="searchSubmit" aria-label="submit search"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchSubmit" aria-label="submit search" onclick="searchSubmit()"><i class="fa fa-search"></i></button>
             </form>
             <table id="potentialSearchResults">
                 <thead>

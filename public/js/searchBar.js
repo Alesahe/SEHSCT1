@@ -104,4 +104,11 @@ function jumpToAnchor(month, elemID) {
     addCal(document.getElementById(elemID));
 };
 
-// adjustments for when page is small
+// 
+function searchSubmit(){
+    const submitBtn = document.getElementById("searchSubmit");
+
+    $(document).ready(function(){
+        $(submitBtn).parent().siblings(".table").children(".tbody").firstChild.click();
+    });
+}

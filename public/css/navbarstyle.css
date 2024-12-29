@@ -1,7 +1,6 @@
 #searchBarForm {
     overflow: visible !important;
     z-index: 100;
-
 }
 
 .topnav {
@@ -84,6 +83,9 @@ span {
 
 @media screen and (max-width: 700px) {
     .topnav a:not(.active) {display: none;}
+    .topnav a.anchor-link {
+        display: block;
+    }
     .topnav a.icon {
         float: right;
         display: block;
@@ -120,6 +122,8 @@ span {
     top: 8px;
     background-color: var(--main-colour);
     z-index:100;
+    outline: none;
+    box-shadow: none;
 }
 
 #searchSubmit {
