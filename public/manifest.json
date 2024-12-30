@@ -5,7 +5,7 @@
     "background_color": "#030c47",
     "display": "standalone",
     "scope": "/",
-    "start_url": "http://127.0.0.1:5500/",
+    "start_url": "/",
     "description": "A free, open-source, all-in-one calendar for your astronomical needs!",
     "orientation": "any",
     "icons": [
