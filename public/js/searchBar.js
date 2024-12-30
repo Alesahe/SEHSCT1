@@ -91,10 +91,6 @@ function addCal(clicked){
 
 // callign above functions through anchor links in the search retuls
 function jumpToAnchor(month, elemID) {
-    // jump to calendar tab if not already there
-    const currTab = window.location.href;
-    // console.log(currTab);
-
     // load anchor links
     $(document).ready(function(){
         $(".dropdown-content").hide();
@@ -104,12 +100,18 @@ function jumpToAnchor(month, elemID) {
     addCal(document.getElementById(elemID));
 };
 
-// 
-function searchSb(){
-    // const submitBtn = document.getElementById("searchSubmit");
+// jump to calendar tab
+function redirectCal(){
+    const redirect = "http://127.0.0.1:5500/calendar";
+    const absURL = new URL(redirect, window.location.href);
+    window.location.href = absURL.href;
+}
 
-    $(document).ready(function(){
-        $(document.getElementById("potentialSearchResults")).children(".tbody").firstChild.click();
-    });
-    console.log("here");
+function searchSb(){
+    window.location.href = "/calendar";
+
+    // $(document).ready(function(){
+    //     $(document.getElementById("potentialSearchResults")).children(".tbody").firstChild.click();
+    // });
+    // console.log("here");
 }
