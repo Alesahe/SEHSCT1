@@ -4,7 +4,6 @@ to-do:
 - log about gantt chart and storyboard
 - clean up logbook
 - fix comments n references, clean up code
-- directory structure
 - record stuff
 
 necessary bug fixes:

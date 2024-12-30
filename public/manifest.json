@@ -10,7 +10,8 @@
     "orientation": "any",
     "icons": [
         {
-            "src": "favicon.ico"
+            "src": "favicon.ico",
+            "type": "image/png"
         }
     ]
 }
