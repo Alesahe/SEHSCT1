@@ -24,7 +24,7 @@ function askNotifPermission() {
             Notification.permission = permission;
         }
 
-        // Set the button to shown or hidden, depending on what the user answers
+        // adapt notification settings screen based on notification permissions
         if (Notification.permission === "denied") {
             msg.style.display = "block";
             msg.textContent = "Your notifications are turned off.";
@@ -97,7 +97,6 @@ function convertDate (date){
     }
 
     // post request for dates of things
-    // console.log(lastSent);
     if (lastSent!=currDate){
         localStorage.setItem("lastSent", currDate);
         lastSent = localStorage.getItem("lastSent");
