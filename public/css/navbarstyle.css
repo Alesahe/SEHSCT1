@@ -87,6 +87,7 @@ span {
     .topnav a:not(.active) {display: none;}
     .topnav a.anchor-link {
         display: block;
+        /* width: 200px !important; */
     }
     .topnav a.icon {
         float: right;
