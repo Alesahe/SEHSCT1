@@ -8,7 +8,6 @@ img {vertical-align: middle;}
     margin: auto;
 }
 
-/* next and previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;

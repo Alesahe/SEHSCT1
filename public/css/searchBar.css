@@ -1,31 +1,19 @@
 #potentialSearchResults {
     display: none;
-    /* top: 7px; */
-    top: 0px;
+    top: 7px;
     font-family: Roboto !important;
     width: 255px !important;
-    /* width: 500px; */
-    /* width: 100%; */
-    /* max-width: 55px !important; */
     font-size: 20px;
     position: relative;
     background-color: var(--background-colour);
-    /* border-collapse: collapse; */
-    /* border: solid var(--main-colour); */
     border-bottom: solid var(--main-colour);
     border-left: solid var(--main-colour);
     border-right: solid var(--main-colour);
-    /* vertical-align: top !important; */
 }
 
 #tableHeader {
     display: none;
 }
-
-/* .anchor-link {
-    padding-top: 5px !important;
-    padding-left: 5px !important;
-} */
 
 td {
     padding-top: 5px;
