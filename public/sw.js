@@ -1,3 +1,5 @@
+// service worker code from https://blog.heroku.com/how-to-make-progressive-web-app
+
 self.addEventListener("install", function(event) {
     event.waitUntil(preLoad());
 });

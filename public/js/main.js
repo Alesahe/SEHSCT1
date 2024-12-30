@@ -1,8 +1,5 @@
-// export {addCal, addMonth}; // export the following functions (to searchBar.js)
-
 //redirect links with /calendar in front
 const currURL = new URL(window.location.href).pathname;
-// console.log(currURL);
 
 const toRedirect = {
     index: "https://127.0.0.1:5500/",
@@ -51,7 +48,7 @@ function displayDateTime() {
     updateDT();
 }
 
-// dropdown shenanigans
+// dropdown animations
 let pause;
 let boolean = 0; // 0 when just closed, 1 when just opened
 
@@ -89,7 +86,6 @@ $(document).ready(function(){
     // calls above function when element of "calEntry" class is called
     $(".calEntry").click(function() {
         if (!this.classList.contains("dropCal")) addCal(this);
-        // console.log(this);
     });
 });
 

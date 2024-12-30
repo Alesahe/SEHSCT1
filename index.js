@@ -3,7 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import sqlite3 from "sqlite3";
 
-//ehe stuff
 import bodyParser from 'body-parser';
 
 // var sqlite3 = require('sqlite3').verbose();
@@ -35,18 +34,15 @@ app.get("/calendar", (req, res) => {
 
 //post requests
 app.post("/performsearch", function (req, res) {
-    // console.log("here");
-    // console.log(req.body.search);
     db.all("SELECT * FROM events WHERE date LIKE ? OR month LIKE ? OR eventtype LIKE ? OR eventname LIKE ?", [`%${req.body.search}%`, `%${req.body.search}%`,`%${req.body.search}%`,`%${req.body.search}%`], function(err, rows) {
         if (err) {
             console.log(err);
         }
         let validResults=[];
         for(let i = 0; i < rows.length; i++) {
-            // console.log(rows[i].eventname);
             validResults.push([rows[i].date, rows[i].month, rows[i].eventname, rows[i].jumplink]);
         }
-        // console.log(validResults);
+
         res.json(validResults);
     });
 });

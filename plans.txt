@@ -1,7 +1,5 @@
 to-do:
 - debug (below)
-- accessibility considerations (in logbook)
-- log about gantt chart and storyboard
 - fix comments n references, clean up code
 - record stuff
 

@@ -16,7 +16,8 @@ if (Notification.permission === "granted"){
     notifBtn.style.display = "none";
 }
 
-// when notifBtn is clicked, make the popup at the top work
+// when notifBtn is clicked, add popup at the top asking for permission
+// code of this function adapted from  https://github.com/mdn/dom-examples/tree/main/to-do-notifications 
 function askNotifPermission() {
     function handlePermission(permission) {
         // browser stores information regardless
@@ -47,6 +48,7 @@ function askNotifPermission() {
     }
 };
 
+// code of this function adapted from  https://github.com/mdn/dom-examples/tree/main/to-do-notifications 
 function checkNotifPromise() {
     try {
         Notification.requestPermission().then();
@@ -65,8 +67,7 @@ function convertDate (date){
 }
 
 // asynchronous functions
-(async () => {    
-        // // show an error message
+(async () => {
     // check notification permission
     let granted = false;
 

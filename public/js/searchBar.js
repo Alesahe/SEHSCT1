@@ -1,12 +1,10 @@
-    // import {addCal, addMonth} from "main.js"; // import necessary functions from main.js
-
 const searchBI = document.getElementById("searchInput");
 
 // post request
 searchBI.addEventListener("keyup", async function(event) {
     clearTable();
     if (event.key!="Enter" && searchBI.value!=""){
-        // console.log(JSON.stringify({search:searchBI.value}));
+        // post request code ADAPTED from https://www.geeksforgeeks.org/how-to-send-an-http-post-request-in-js/
         await fetch("/performsearch", {
             method: "POST",
             body: JSON.stringify ({
@@ -34,7 +32,6 @@ function displayResults(validEntries) {
     document.getElementById("potentialSearchResults").style.display = "table";
 
     // loop through array of arrays of events
-    // console.log(Math.min(validEntries.length, 6))
     for (let i=0; i<Math.min(validEntries.length, 6); i++){
         const tableBody = document.getElementById("potentialSearchResults").getElementsByTagName("tbody")[0];  
         
@@ -43,7 +40,6 @@ function displayResults(validEntries) {
         
         // create new cells within the rows and add information into cells to display
         const newCell = newRow.insertCell(0);
-        // newCell.innerHTML = `<a href="../calendar#j1" class="anchor-link" onclick="jumpToAnchor('` + validEntries[i][1] + `', '` + validEntries[i][3] + `')">` +validEntries[i][0] + ` ` + validEntries[i][1] + ` ` + validEntries[i][2] + `</a>`;
         newCell.innerHTML = `<a href="../calendar#` + validEntries[i][3] + `" class="anchor-link" onclick="jumpToAnchor('` + validEntries[i][1] + `', '` + validEntries[i][3] + `')">` +validEntries[i][0] + ` ` + validEntries[i][1] + ` ` + validEntries[i][2] + `</a>`;
         console.log(newCell.innerHTML);
     }
@@ -62,7 +58,6 @@ function clearTable(){
     document.getElementById("potentialSearchResults").style.display = "none";
 }
 
-// functions, from main.js
 // toggles the addition of the dropdown bar and button change MONTHS ONLY
 function addMonth(clicked){
     $(document).ready(function(){
@@ -78,7 +73,7 @@ function addMonth(clicked){
     });
 }
 
-    // addition of  dropdown bar and button change
+// addition of  dropdown bar and button change
 function addCal(clicked){
     $(document).ready(function(){
         $(clicked).siblings().slideDown("slow");
@@ -105,13 +100,4 @@ function redirectCal(){
     const redirect = "http://127.0.0.1:5500/calendar";
     const absURL = new URL(redirect, window.location.href);
     window.location.href = absURL.href;
-}
-
-function searchSb(){
-    window.location.href = "/calendar";
-
-    // $(document).ready(function(){
-    //     $(document.getElementById("potentialSearchResults")).children(".tbody").firstChild.click();
-    // });
-    // console.log("here");
 }

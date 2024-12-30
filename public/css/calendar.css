@@ -122,15 +122,12 @@ img {
 }
 
 /* dropdown */
-
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
     width: 90%; 
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     padding-left: 65px;
@@ -138,9 +135,7 @@ img {
     padding-bottom: 25px;
     padding-right: 50px;
     text-align: left;
-    /* position: absolute; */
     background-color: var(--background-colour);
-    /* border: #ebf7ff !important; */
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     border-bottom: solid var(--main-colour);
@@ -151,19 +146,16 @@ img {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content .dropdown {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display:block;
 }
 
-/* accommodate for small screen sizes */
 @media screen and (max-width: 600px) {
     .dropdown-content:not(.dropdown) {
         font-size: 15px !important;
